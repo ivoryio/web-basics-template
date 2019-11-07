@@ -1,0 +1,38 @@
+{
+  "name": "ivory-web-spa-ci-cd",
+  "version": "0.1.0",
+  "bin": {
+    "app": "bin/app.js"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  },
+  "scripts": {
+    "cdk": "cdk",
+    "test": "jest",
+    "watch": "tsc -w",
+    "build": "rm -rf ./build && tsc",
+    "nuke": "cdk destroy --app 'node build/infrastructure/app.js dfs-web-spa-ci-cd'",
+    "deploy": "npm run build && cdk deploy --app 'node build/infrastructure/app.js' dfs-web-spa-ci-cd --output 'build/cdk.out' --strict"
+  },
+  "devDependencies": {
+    "aws-cdk": "^1.15.0",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.6.2"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-codebuild": "^1.15.0",
+    "@aws-cdk/aws-codecommit": "^1.15.0",
+    "@aws-cdk/aws-dynamodb": "^1.15.0",
+    "@aws-cdk/aws-events-targets": "^1.15.0",
+    "@aws-cdk/aws-iam": "^1.15.0",
+    "@aws-cdk/aws-lambda": "^1.15.0",
+    "@aws-cdk/aws-s3": "^1.15.0",
+    "@aws-cdk/core": "^1.15.0",
+    "@types/node": "^12.12.6",
+    "source-map-support": "^0.5.9"
+  }
+}

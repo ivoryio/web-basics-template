@@ -1,0 +1,141 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": [
+      {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      {
+        "id": "dfs-web-spa-ci-cd",
+        "path": "dfs-web-spa-ci-cd",
+        "children": [
+          {
+            "id": "dfs-web-spa-repo",
+            "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/Resource"
+              },
+              {
+                "id": "web-spa-pr",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/web-spa-pr",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/web-spa-pr/Resource"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dfs-web-spa-pullrequest-build",
+            "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build",
+            "children": [
+              {
+                "id": "Role",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role/Resource"
+                  },
+                  {
+                    "id": "DefaultPolicy",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role/DefaultPolicy",
+                    "children": [
+                      {
+                        "id": "Resource",
+                        "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role/DefaultPolicy/Resource"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "Resource",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Resource"
+              }
+            ]
+          },
+          {
+            "id": "dfs-web-spa-pr-buildhandler",
+            "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler",
+            "children": [
+              {
+                "id": "ServiceRole",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole/Resource"
+                  },
+                  {
+                    "id": "DefaultPolicy",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole/DefaultPolicy",
+                    "children": [
+                      {
+                        "id": "Resource",
+                        "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole/DefaultPolicy/Resource"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "Code",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/Code",
+                "children": [
+                  {
+                    "id": "Stage",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/Code/Stage"
+                  },
+                  {
+                    "id": "AssetBucket",
+                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/Code/AssetBucket"
+                  }
+                ]
+              },
+              {
+                "id": "Resource",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/Resource"
+              },
+              {
+                "id": "AllowEventRuledfswebspacicddfswebsparepowebspapr775366FE",
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/AllowEventRuledfswebspacicddfswebsparepowebspapr775366FE"
+              }
+            ]
+          },
+          {
+            "id": "AssetParameters",
+            "path": "dfs-web-spa-ci-cd/AssetParameters",
+            "children": [
+              {
+                "id": "389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0",
+                "path": "dfs-web-spa-ci-cd/AssetParameters/389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0",
+                "children": [
+                  {
+                    "id": "S3Bucket",
+                    "path": "dfs-web-spa-ci-cd/AssetParameters/389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0/S3Bucket"
+                  },
+                  {
+                    "id": "S3VersionKey",
+                    "path": "dfs-web-spa-ci-cd/AssetParameters/389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0/S3VersionKey"
+                  },
+                  {
+                    "id": "ArtifactHash",
+                    "path": "dfs-web-spa-ci-cd/AssetParameters/389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0/ArtifactHash"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

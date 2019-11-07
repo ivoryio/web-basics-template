@@ -1,0 +1,15 @@
+{
+  "Resources": {
+    "IvoryWebSpa137C8019A": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "ivorywebspa1"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "IvoryWebSpaCiCdStack/IvoryWebSpa1/Resource"
+      }
+    }
+  }
+}
