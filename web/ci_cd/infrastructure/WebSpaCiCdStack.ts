@@ -1,10 +1,5 @@
-import * as path from 'path'
 import * as cdk from '@aws-cdk/core'
-import * as iam from '@aws-cdk/aws-iam'
-import * as lambda from '@aws-cdk/aws-lambda'
-import * as codebuild from '@aws-cdk/aws-codebuild'
 import * as codecommit from '@aws-cdk/aws-codecommit'
-import * as targets from '@aws-cdk/aws-events-targets'
 import { PullRequestBuild } from './constructs/PullRequestBuild'
 
 export interface IWebSpaCiCdStackProps extends cdk.StackProps {
@@ -18,7 +13,10 @@ export class WebSpaCiCdStack extends cdk.Stack {
     const { projectName } = props
 
     const repository = this.createCodeRepository(projectName)
+    this.createPullRequestBuild(repository)
+  }
 
+  private createPullRequestBuild(repository: codecommit.Repository) {
     new PullRequestBuild(this, `web-spa-pull-request-build`, {
       repository,
       buildSpec: this.makeBuildSpec(),
