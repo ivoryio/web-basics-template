@@ -10,7 +10,7 @@
         "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/Resource"
       }
     },
-    "dfswebsparepowebspapr3B62C52B": {
+    "dfswebsparepodFYVP9RM8cS8CjiJsyeiAF7D9C933B": {
       "Type": "AWS::Events::Rule",
       "Properties": {
         "EventPattern": {
@@ -34,7 +34,7 @@
           {
             "Arn": {
               "Fn::GetAtt": [
-                "dfswebspaprbuildhandlerC2902199",
+                "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
                 "Arn"
               ]
             },
@@ -43,10 +43,10 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/web-spa-pr/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/dFYVP9RM8cS8CjiJsyeiAF/Resource"
       }
     },
-    "dfswebspapullrequestbuildRole0FAFD96C": {
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRole706F47C7": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -63,10 +63,10 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/Resource"
       }
     },
-    "dfswebspapullrequestbuildRoleDefaultPolicy4EA97F8F": {
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRoleDefaultPolicyE659BB64": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -107,7 +107,7 @@
                       },
                       ":log-group:/aws/codebuild/",
                       {
-                        "Ref": "dfswebspapullrequestbuildF6B0B80B"
+                        "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
                       }
                     ]
                   ]
@@ -130,7 +130,7 @@
                       },
                       ":log-group:/aws/codebuild/",
                       {
-                        "Ref": "dfswebspapullrequestbuildF6B0B80B"
+                        "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
                       },
                       ":*"
                     ]
@@ -141,18 +141,18 @@
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "dfswebspapullrequestbuildRoleDefaultPolicy4EA97F8F",
+        "PolicyName": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRoleDefaultPolicyE659BB64",
         "Roles": [
           {
-            "Ref": "dfswebspapullrequestbuildRole0FAFD96C"
+            "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRole706F47C7"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Role/DefaultPolicy/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/DefaultPolicy/Resource"
       }
     },
-    "dfswebspapullrequestbuildF6B0B80B": {
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958": {
       "Type": "AWS::CodeBuild::Project",
       "Properties": {
         "Artifacts": {
@@ -166,12 +166,12 @@
         },
         "ServiceRole": {
           "Fn::GetAtt": [
-            "dfswebspapullrequestbuildRole0FAFD96C",
+            "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRole706F47C7",
             "Arn"
           ]
         },
         "Source": {
-          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"npm i\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\"\n      ]\n    }\n  }\n}",
+          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"echo pre_build\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"echo build\"\n      ]\n    }\n  }\n}",
           "Location": {
             "Fn::GetAtt": [
               "dfswebsparepo5E53864C",
@@ -180,13 +180,127 @@
           },
           "Type": "CODECOMMIT"
         },
-        "Name": "dfs-web-spa-pullrequest-build"
+        "Name": "q2bps1PDCBFCmmLXmMqvkH"
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pullrequest-build/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Resource"
       }
     },
-    "dfswebspaprbuildhandlerServiceRole55C9FD1D": {
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJjF95AFE9B": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codebuild"
+          ],
+          "detail": {
+            "project-name": [
+              {
+                "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
+              }
+            ],
+            "build-status": [
+              "FAILED"
+            ]
+          },
+          "detail-type": [
+            "CodeBuild Build State Change"
+          ]
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+                "Arn"
+              ]
+            },
+            "Id": "Target0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/assJNLxo8rHhnKuVmbDnJj/Resource"
+      }
+    },
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM9A5FDC50": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codebuild"
+          ],
+          "detail": {
+            "project-name": [
+              {
+                "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
+              }
+            ],
+            "build-status": [
+              "IN_PROGRESS"
+            ]
+          },
+          "detail-type": [
+            "CodeBuild Build State Change"
+          ]
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+                "Arn"
+              ]
+            },
+            "Id": "Target0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/pRL7jrEYxV64GXhhHtx2tM/Resource"
+      }
+    },
+    "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtB295812D": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codebuild"
+          ],
+          "detail": {
+            "project-name": [
+              {
+                "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
+              }
+            ],
+            "build-status": [
+              "SUCCEEDED"
+            ]
+          },
+          "detail-type": [
+            "CodeBuild Build State Change"
+          ]
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+                "Arn"
+              ]
+            },
+            "Id": "Target0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/36xokqoPCV1emaKnF4QvZt/Resource"
+      }
+    },
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRole1B854AEC": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -217,10 +331,10 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/Resource"
       }
     },
-    "dfswebspaprbuildhandlerServiceRoleDefaultPolicy69B24B6B": {
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRoleDefaultPolicy3A7A8999": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -234,27 +348,37 @@
                   "Arn"
                 ]
               }
+            },
+            {
+              "Action": "codebuild:StartBuild",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958",
+                  "Arn"
+                ]
+              }
             }
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "dfswebspaprbuildhandlerServiceRoleDefaultPolicy69B24B6B",
+        "PolicyName": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRoleDefaultPolicy3A7A8999",
         "Roles": [
           {
-            "Ref": "dfswebspaprbuildhandlerServiceRole55C9FD1D"
+            "Ref": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRole1B854AEC"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/ServiceRole/DefaultPolicy/Resource"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/DefaultPolicy/Resource"
       }
     },
-    "dfswebspaprbuildhandlerC2902199": {
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0S3BucketA8D7BAC3"
+            "Ref": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3BucketD3C96C3A"
           },
           "S3Key": {
             "Fn::Join": [
@@ -267,7 +391,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0S3VersionKey252880E2"
+                          "Ref": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3VersionKey8166E900"
                         }
                       ]
                     }
@@ -280,7 +404,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0S3VersionKey252880E2"
+                          "Ref": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3VersionKey8166E900"
                         }
                       ]
                     }
@@ -290,70 +414,142 @@
             ]
           }
         },
-        "Handler": "buildHandler.handler",
+        "Handler": "index.handler",
         "Role": {
           "Fn::GetAtt": [
-            "dfswebspaprbuildhandlerServiceRole55C9FD1D",
+            "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRole1B854AEC",
             "Arn"
           ]
         },
         "Runtime": "nodejs10.x",
-        "Description": "Post comments on a PR when a build started, succeseded or failed for a PR",
+        "Description": "Triggers builds when a PR is open or changes state and posts comments with the builds status (in progress, succeeded or failed).",
         "Environment": {
           "Variables": {
+            "REPOSITORY_NAME": {
+              "Fn::GetAtt": [
+                "dfswebsparepo5E53864C",
+                "Name"
+              ]
+            },
             "BUILD_PROJECT_NAME": {
-              "Ref": "dfswebspapullrequestbuildF6B0B80B"
+              "Ref": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958"
             }
           }
         },
-        "FunctionName": "DFS/IvoryBuildBot",
+        "FunctionName": "8p2AQD8WV5uZHSgyaPCRty-PullRequestBot",
         "MemorySize": 256
       },
       "DependsOn": [
-        "dfswebspaprbuildhandlerServiceRoleDefaultPolicy69B24B6B",
-        "dfswebspaprbuildhandlerServiceRole55C9FD1D"
+        "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRoleDefaultPolicy3A7A8999",
+        "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRole1B854AEC"
       ],
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/Resource",
-        "aws:asset:path": "asset.389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0",
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Resource",
+        "aws:asset:path": "asset.c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
         "aws:asset:property": "Code"
       }
     },
-    "dfswebspaprbuildhandlerAllowEventRuledfswebspacicddfswebsparepowebspapr775366FEA13DEE69": {
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B8023B945D9": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "Action": "lambda:InvokeFunction",
         "FunctionName": {
           "Fn::GetAtt": [
-            "dfswebspaprbuildhandlerC2902199",
+            "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
             "Arn"
           ]
         },
         "Principal": "events.amazonaws.com",
         "SourceArn": {
           "Fn::GetAtt": [
-            "dfswebsparepowebspapr3B62C52B",
+            "dfswebsparepodFYVP9RM8cS8CjiJsyeiAF7D9C933B",
             "Arn"
           ]
         }
       },
       "Metadata": {
-        "aws:cdk:path": "dfs-web-spa-ci-cd/dfs-web-spa-pr-buildhandler/AllowEventRuledfswebspacicddfswebsparepowebspapr775366FE"
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B80"
+      }
+    },
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1DC2F76FF9": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJjF95AFE9B",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1D"
+      }
+    },
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC3806B915": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM9A5FDC50",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC"
+      }
+    },
+    "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08A0EE61BF": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtB295812D",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08"
       }
     }
   },
   "Parameters": {
-    "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0S3BucketA8D7BAC3": {
+    "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3BucketD3C96C3A": {
       "Type": "String",
-      "Description": "S3 bucket for asset \"389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0\""
+      "Description": "S3 bucket for asset \"c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927\""
     },
-    "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0S3VersionKey252880E2": {
+    "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3VersionKey8166E900": {
       "Type": "String",
-      "Description": "S3 key for asset version \"389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0\""
+      "Description": "S3 key for asset version \"c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927\""
     },
-    "AssetParameters389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0ArtifactHashEFBE1202": {
+    "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927ArtifactHash6C4E07A5": {
       "Type": "String",
-      "Description": "Artifact hash for asset \"389ae2ca84e7ce904e9e99d0603f26cae4ce47b74a542bb4f1e553ca84723af0\""
+      "Description": "Artifact hash for asset \"c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927\""
     }
   }
 }

@@ -109,38 +109,41 @@ async function handleBuildEvent(event: any) {
     return pullRequestIdEnvVar && sourceCommitEnvVar && destinationCommitEnvVar
   }
   function makeComment() {
-    const buildArn = event.detail['build-id']
-    const buildId = buildArn.split('/').pop()
-    const buildUuid = buildId.split(':').pop()
-    const buildStatus = event.detail['build-status']
-    const region = event.region
-    // Only comment once per build and build status
+    return `Build ${makeBuildStatusMessage()} ${makeBuildDetailsLinkMessage()}`
 
-    // Construct a comment based on build status
-    var comment = `Build ${buildUuid}  `
+    function makeBuildStatusMessage() {
+      let message = ''
 
-    switch (buildStatus) {
-      case 'IN_PROGRESS':
-        comment += 'is **in progress**.'
-        break
-      case 'SUCCEEDED':
-        comment += '**succeeded!**'
-        break
-      case 'STOPPED':
-        comment += 'was **canceled**.'
-        break
-      case 'TIMED_OUT':
-        comment += '**timed out**.'
-        break
-      default:
-        comment += '**failed**.'
+      const buildStatus = event.detail['build-status']
+      switch (buildStatus) {
+        case 'IN_PROGRESS':
+          message += 'is **in progress**.'
+          break
+        case 'SUCCEEDED':
+          message += '**succeeded!**'
+          break
+        case 'STOPPED':
+          message += 'was **canceled**.'
+          break
+        case 'TIMED_OUT':
+          message += '**timed out**.'
+          break
+        default:
+          message += '**failed**.'
+      }
+
+      return message
     }
+    function makeBuildDetailsLinkMessage() {
+      const region = event.region
+      const buildArn = event.detail['build-id']
+      const buildId = buildArn.split('/').pop()
 
-    comment +=
-      ` Visit the [AWS CodeBuild console](https:\/\/${region}.console.aws.amazon.com\/codebuild\/home?` +
-      `region=${region}#\/builds\/${encodeURI(buildId)}\/view\/new) to view the build details.`
-
-    return comment
+      return (
+        `Go to the [AWS CodeBuild console](https:\/\/${region}.console.aws.amazon.com\/codebuild\/home?` +
+        `region=${region}#\/builds\/${encodeURI(buildId)}\/view\/new) to view the build details.`
+      )
+    }
   }
   function makeRequestToken() {
     const buildArn = event.detail['build-id']
@@ -154,7 +157,7 @@ function log(obj: any) {
   console.log(
     util.inspect(obj, {
       compact: false,
-      depth: 5,
+      depth: 8,
       breakLength: 100,
     })
   )
