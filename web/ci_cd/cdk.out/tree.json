@@ -3,187 +3,198 @@
   "tree": {
     "id": "App",
     "path": "",
-    "children": [
-      {
+    "children": {
+      "Tree": {
         "id": "Tree",
         "path": "Tree"
       },
-      {
+      "dfs-web-spa-ci-cd": {
         "id": "dfs-web-spa-ci-cd",
         "path": "dfs-web-spa-ci-cd",
-        "children": [
-          {
+        "children": {
+          "dfs-web-spa-repo": {
             "id": "dfs-web-spa-repo",
             "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo",
-            "children": [
-              {
+            "children": {
+              "Resource": {
                 "id": "Resource",
-                "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/Resource"
-              },
-              {
-                "id": "dFYVP9RM8cS8CjiJsyeiAF",
-                "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/dFYVP9RM8cS8CjiJsyeiAF",
-                "children": [
-                  {
-                    "id": "Resource",
-                    "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/dFYVP9RM8cS8CjiJsyeiAF/Resource"
+                "path": "dfs-web-spa-ci-cd/dfs-web-spa-repo/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CodeCommit::Repository",
+                  "aws:cdk:cloudformation:props": {
+                    "repositoryName": "dfs-web-spa-repo",
+                    "repositoryDescription": "The Web SPA source code for dfs created by Ivory.",
+                    "triggers": "<unresolved-lazy>"
                   }
-                ]
+                }
               }
-            ]
+            }
           },
-          {
-            "id": "web-spa-pull-request-build",
-            "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build",
-            "children": [
-              {
-                "id": "q2bps1PDCBFCmmLXmMqvkH",
-                "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH",
-                "children": [
-                  {
-                    "id": "Role",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role",
-                    "children": [
-                      {
-                        "id": "Resource",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/Resource"
-                      },
-                      {
-                        "id": "DefaultPolicy",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/DefaultPolicy",
-                        "children": [
-                          {
-                            "id": "Resource",
-                            "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/DefaultPolicy/Resource"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
+          "v1dCDFgsMMcQ8vWYhpXRb3": {
+            "id": "v1dCDFgsMMcQ8vWYhpXRb3",
+            "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3",
+            "children": {
+              "u339NYDfrFdXQcczNqNEm4": {
+                "id": "u339NYDfrFdXQcczNqNEm4",
+                "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4",
+                "children": {
+                  "Resource": {
                     "id": "Resource",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Resource"
-                  },
-                  {
-                    "id": "assJNLxo8rHhnKuVmbDnJj",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/assJNLxo8rHhnKuVmbDnJj",
-                    "children": [
-                      {
-                        "id": "Resource",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/assJNLxo8rHhnKuVmbDnJj/Resource"
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {
+                        "bucketName": "${Token[TOKEN.26]}",
+                        "corsConfiguration": "<unresolved-lazy>",
+                        "lifecycleConfiguration": "<unresolved-lazy>",
+                        "metricsConfigurations": "<unresolved-lazy>",
+                        "publicAccessBlockConfiguration": {
+                          "blockPublicAcls": false,
+                          "blockPublicPolicy": false,
+                          "ignorePublicAcls": false,
+                          "restrictPublicBuckets": false
+                        },
+                        "websiteConfiguration": {
+                          "indexDocument": "index.html",
+                          "errorDocument": "index.html"
+                        }
                       }
-                    ]
+                    }
                   },
-                  {
-                    "id": "pRL7jrEYxV64GXhhHtx2tM",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/pRL7jrEYxV64GXhhHtx2tM",
-                    "children": [
-                      {
-                        "id": "Resource",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/pRL7jrEYxV64GXhhHtx2tM/Resource"
-                      }
-                    ]
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Notifications"
                   },
-                  {
-                    "id": "36xokqoPCV1emaKnF4QvZt",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/36xokqoPCV1emaKnF4QvZt",
-                    "children": [
-                      {
+                  "Policy": {
+                    "id": "Policy",
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Policy",
+                    "children": {
+                      "Resource": {
                         "id": "Resource",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/36xokqoPCV1emaKnF4QvZt/Resource"
+                        "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Policy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                          "aws:cdk:cloudformation:props": {
+                            "bucket": "${Token[TOKEN.34]}",
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": "*",
+                                  "Resource": "${Token[TOKEN.35]}/*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        }
                       }
-                    ]
+                    }
                   }
-                ]
+                }
               },
-              {
-                "id": "8kcam41ME3mXjHxQtByKvg",
-                "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg",
-                "children": [
-                  {
-                    "id": "ServiceRole",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole",
-                    "children": [
-                      {
-                        "id": "Resource",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/Resource"
-                      },
-                      {
-                        "id": "DefaultPolicy",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/DefaultPolicy",
-                        "children": [
-                          {
-                            "id": "Resource",
-                            "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/DefaultPolicy/Resource"
+              "8xe8nBzm63hAKfS5EJguRS": {
+                "id": "8xe8nBzm63hAKfS5EJguRS",
+                "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/8xe8nBzm63hAKfS5EJguRS",
+                "children": {
+                  "AliasConfigurationCert": {
+                    "id": "AliasConfigurationCert",
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/8xe8nBzm63hAKfS5EJguRS/AliasConfigurationCert"
+                  },
+                  "CFDistribution": {
+                    "id": "CFDistribution",
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/8xe8nBzm63hAKfS5EJguRS/CFDistribution",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                      "aws:cdk:cloudformation:props": {
+                        "distributionConfig": {
+                          "enabled": true,
+                          "defaultRootObject": "index.html",
+                          "httpVersion": "http2",
+                          "priceClass": "PriceClass_100",
+                          "ipv6Enabled": true,
+                          "customErrorResponses": [
+                            {
+                              "errorCode": 403,
+                              "responseCode": 200,
+                              "responsePagePath": "/index.html"
+                            },
+                            {
+                              "errorCode": 404,
+                              "responseCode": 200,
+                              "responsePagePath": "/index.html"
+                            }
+                          ],
+                          "origins": [
+                            {
+                              "id": "origin1",
+                              "domainName": "${Token[TOKEN.31]}",
+                              "s3OriginConfig": {}
+                            }
+                          ],
+                          "defaultCacheBehavior": {
+                            "allowedMethods": [
+                              "GET",
+                              "HEAD"
+                            ],
+                            "cachedMethods": [
+                              "GET",
+                              "HEAD"
+                            ],
+                            "compress": true,
+                            "forwardedValues": {
+                              "queryString": false,
+                              "cookies": {
+                                "forward": "none"
+                              }
+                            },
+                            "targetOriginId": "origin1",
+                            "viewerProtocolPolicy": "redirect-to-https"
+                          },
+                          "aliases": [
+                            "staging.ivory.io"
+                          ],
+                          "viewerCertificate": {
+                            "acmCertificateArn": "arn:aws:acm:us-east-1:371148846105:certificate/a1c3059d-2c3a-4863-b186-f0876d01ae2f",
+                            "sslSupportMethod": "sni-only"
                           }
-                        ]
+                        }
                       }
-                    ]
-                  },
-                  {
-                    "id": "Code",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Code",
-                    "children": [
-                      {
-                        "id": "Stage",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Code/Stage"
-                      },
-                      {
-                        "id": "AssetBucket",
-                        "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Code/AssetBucket"
-                      }
-                    ]
-                  },
-                  {
+                    }
+                  }
+                }
+              },
+              "nBnq3iQBWfzHHawkWJXbW6": {
+                "id": "nBnq3iQBWfzHHawkWJXbW6",
+                "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/nBnq3iQBWfzHHawkWJXbW6"
+              },
+              "rMnSBSmY5rowXXugEAg977": {
+                "id": "rMnSBSmY5rowXXugEAg977",
+                "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/rMnSBSmY5rowXXugEAg977",
+                "children": {
+                  "Resource": {
                     "id": "Resource",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Resource"
-                  },
-                  {
-                    "id": "AllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B80",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B80"
-                  },
-                  {
-                    "id": "AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1D",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1D"
-                  },
-                  {
-                    "id": "AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC"
-                  },
-                  {
-                    "id": "AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08",
-                    "path": "dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08"
+                    "path": "dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/rMnSBSmY5rowXXugEAg977/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "staging.ivory.io.",
+                        "type": "A",
+                        "aliasTarget": {
+                          "hostedZoneId": "Z2FDTNDATAQYW2",
+                          "dnsName": "${Token[TOKEN.42]}"
+                        },
+                        "hostedZoneId": "Z2GJKAQ331LA4T"
+                      }
+                    }
                   }
-                ]
+                }
               }
-            ]
-          },
-          {
-            "id": "AssetParameters",
-            "path": "dfs-web-spa-ci-cd/AssetParameters",
-            "children": [
-              {
-                "id": "c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
-                "path": "dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
-                "children": [
-                  {
-                    "id": "S3Bucket",
-                    "path": "dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/S3Bucket"
-                  },
-                  {
-                    "id": "S3VersionKey",
-                    "path": "dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/S3VersionKey"
-                  },
-                  {
-                    "id": "ArtifactHash",
-                    "path": "dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/ArtifactHash"
-                  }
-                ]
-              }
-            ]
+            }
           }
-        ]
+        }
       }
-    ]
+    }
   }
 }

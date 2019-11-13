@@ -1,6 +1,8 @@
 import * as cdk from '@aws-cdk/core'
+import * as shortUUID from 'short-uuid'
 import * as codecommit from '@aws-cdk/aws-codecommit'
 import { PullRequestBuild } from './constructs/PullRequestBuild'
+import { WebSPADeploymentEnvironment } from './constructs/WebSPADeployment'
 
 export interface IWebSpaCiCdStackProps extends cdk.StackProps {
   projectName: string
@@ -14,6 +16,8 @@ export class WebSpaCiCdStack extends cdk.Stack {
 
     const repository = this.createCodeRepository(projectName)
     this.createPullRequestBuild(repository)
+    this.createDeployment('staging')
+    this.createDeployment('production')
   }
 
   private createPullRequestBuild(repository: codecommit.Repository) {
@@ -32,6 +36,18 @@ export class WebSpaCiCdStack extends cdk.Stack {
     }
 
     return new codecommit.Repository(this, repositoryName, props)
+  }
+
+  private createDeployment(stage: 'staging' | 'production') {
+    new WebSPADeploymentEnvironment(this, shortUUID.generate(), {
+      dnsInfo: {
+        recordName: 'staging',
+        appDomainName: 'ivory.io',
+        hostedZoneId: 'Z2GJKAQ331LA4T',
+        certificateARN:
+          'arn:aws:acm:us-east-1:371148846105:certificate/a1c3059d-2c3a-4863-b186-f0876d01ae2f',
+      },
+    })
   }
 
   private makeBuildSpec() {

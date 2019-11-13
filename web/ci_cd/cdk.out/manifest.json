@@ -1,5 +1,5 @@
 {
-  "version": "1.10.0",
+  "version": "1.16.0",
   "artifacts": {
     "Tree": {
       "type": "cdk:tree",
@@ -14,46 +14,14 @@
         "templateFile": "dfs-web-spa-ci-cd.template.json"
       },
       "metadata": {
-        "/dfs-web-spa-ci-cd": [
-          {
-            "type": "aws:cdk:asset",
-            "data": {
-              "path": "asset.c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
-              "id": "c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
-              "packaging": "zip",
-              "sourceHash": "c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927",
-              "s3BucketParameter": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3BucketD3C96C3A",
-              "s3KeyParameter": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3VersionKey8166E900",
-              "artifactHashParameter": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927ArtifactHash6C4E07A5"
-            },
-            "trace": [
-              "WebSpaCiCdStack.addFileAsset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/stack.ts:508:17)",
-              "new Asset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
-              "AssetCode.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:433:29)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
         "/dfs-web-spa-ci-cd/dfs-web-spa-repo/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "dfswebsparepo5E53864C",
             "trace": [
               "new Repository (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:285:23)",
-              "WebSpaCiCdStack.createCodeRepository (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:36:12)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:20:29)",
+              "WebSpaCiCdStack.createCodeRepository (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:38:12)",
+              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:17:29)",
               "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
               "Module._compile (internal/modules/cjs/loader.js:799:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
@@ -65,18 +33,16 @@
             ]
           }
         ],
-        "/dfs-web-spa-ci-cd/dfs-web-spa-repo/dFYVP9RM8cS8CjiJsyeiAF/Resource": [
+        "/dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "dfswebsparepodFYVP9RM8cS8CjiJsyeiAF7D9C933B",
+            "data": "v1dCDFgsMMcQ8vWYhpXRb3u339NYDfrFdXQcczNqNEm4B9F18AC8",
             "trace": [
-              "new Rule (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:105:22)",
-              "Repository.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:121:18)",
-              "Repository.onPullRequestStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:176:23)",
-              "listenToRepositoryEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:82:18)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:47:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
+              "new Bucket (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1000:22)",
+              "WebSPADeployment.createDeploymentBucket (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:33:12)",
+              "new WebSPADeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:26:34)",
+              "WebSpaCiCdStack.createDeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:42:5)",
+              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:19:10)",
               "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
               "Module._compile (internal/modules/cjs/loader.js:799:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
@@ -88,16 +54,20 @@
             ]
           }
         ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/Resource": [
+        "/dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/u339NYDfrFdXQcczNqNEm4/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRole706F47C7",
+            "data": "v1dCDFgsMMcQ8vWYhpXRb3u339NYDfrFdXQcczNqNEm4Policy91A2E1E8",
             "trace": [
-              "new Role (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/role.ts:300:18)",
-              "new Project (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:665:31)",
-              "PullRequestBuild.createBuildProject (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:36:12)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:23:31)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
+              "new BucketPolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:32:5)",
+              "Bucket.addToResourcePolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:413:21)",
+              "Function.addToPrincipalOrResource (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/grant.ts:130:22)",
+              "Bucket.grantPublicAccess (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:564:22)",
+              "new Bucket (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1046:12)",
+              "WebSPADeployment.createDeploymentBucket (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:33:12)",
+              "new WebSPADeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:26:34)",
+              "WebSpaCiCdStack.createDeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:42:5)",
+              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:19:10)",
               "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
               "Module._compile (internal/modules/cjs/loader.js:799:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
@@ -109,19 +79,16 @@
             ]
           }
         ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Role/DefaultPolicy/Resource": [
+        "/dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/8xe8nBzm63hAKfS5EJguRS/CFDistribution": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHRoleDefaultPolicyE659BB64",
+            "data": "v1dCDFgsMMcQ8vWYhpXRb38xe8nBzm63hAKfS5EJguRSCFDistribution91DEAFED",
             "trace": [
-              "new Policy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/policy.ts:102:22)",
-              "Role.addToPolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/role.ts:340:28)",
-              "Project.addToRolePolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:198:17)",
-              "CodeCommitSource.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/source.ts:490:13)",
-              "new Project (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:676:38)",
-              "PullRequestBuild.createBuildProject (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:36:12)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:23:31)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
+              "new CloudFrontWebDistribution (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-cloudfront/lib/web_distribution.ts:800:26)",
+              "WebSPADeployment.createCDNDistribution (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:79:12)",
+              "new WebSPADeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:27:40)",
+              "WebSpaCiCdStack.createDeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:42:5)",
+              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:19:10)",
               "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
               "Module._compile (internal/modules/cjs/loader.js:799:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
@@ -133,335 +100,17 @@
             ]
           }
         ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/Resource": [
+        "/dfs-web-spa-ci-cd/v1dCDFgsMMcQ8vWYhpXRb3/rMnSBSmY5rowXXugEAg977/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH4F51A958",
+            "data": "v1dCDFgsMMcQ8vWYhpXRb3rMnSBSmY5rowXXugEAg977D92ADBB1",
             "trace": [
-              "new Project (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:712:22)",
-              "PullRequestBuild.createBuildProject (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:36:12)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:23:31)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/assJNLxo8rHhnKuVmbDnJj/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJjF95AFE9B",
-            "trace": [
-              "new Rule (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:105:22)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:208:18)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildFailed (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:289:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:87:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/pRL7jrEYxV64GXhhHtx2tM/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM9A5FDC50",
-            "trace": [
-              "new Rule (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:105:22)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:208:18)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildStarted (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:273:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:90:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/q2bps1PDCBFCmmLXmMqvkH/36xokqoPCV1emaKnF4QvZt/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtB295812D",
-            "trace": [
-              "new Rule (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:105:22)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:208:18)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildSucceeded (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:305:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:93:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRole1B854AEC",
-            "trace": [
-              "new Role (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/role.ts:300:18)",
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:416:31)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgServiceRoleDefaultPolicy3A7A8999",
-            "trace": [
-              "new Policy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/policy.ts:102:22)",
-              "Role.addToPolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-iam/lib/role.ts:340:28)",
-              "Function.addToRolePolicy (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:215:15)",
-              "grantPermissions (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:66:12)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:46:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvg90D1AD8D",
-            "trace": [
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:436:35)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B80": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicddfswebsparepodFYVP9RM8cS8CjiJsyeiAF8C441B8023B945D9",
-            "trace": [
-              "Function.addPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:197:5)",
-              "Object.addLambdaPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:32:13)",
-              "LambdaFunction.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/lambda.ts:33:5)",
-              "Rule.addTarget (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:141:32)",
-              "Repository.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:126:10)",
-              "Repository.onPullRequestStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:176:23)",
-              "listenToRepositoryEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:82:18)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:47:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1D": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHassJNLxo8rHhnKuVmbDnJj3BE84E1DC2F76FF9",
-            "trace": [
-              "Function.addPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:197:5)",
-              "Object.addLambdaPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:32:13)",
-              "LambdaFunction.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/lambda.ts:33:5)",
-              "Rule.addTarget (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:141:32)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:209:10)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildFailed (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:289:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:87:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkHpRL7jrEYxV64GXhhHtx2tM73F101CC3806B915",
-            "trace": [
-              "Function.addPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:197:5)",
-              "Object.addLambdaPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:32:13)",
-              "LambdaFunction.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/lambda.ts:33:5)",
-              "Rule.addTarget (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:141:32)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:209:10)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildStarted (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:273:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:90:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/web-spa-pull-request-build/8kcam41ME3mXjHxQtByKvg/AllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "webspapullrequestbuild8kcam41ME3mXjHxQtByKvgAllowEventRuledfswebspacicdwebspapullrequestbuildq2bps1PDCBFCmmLXmMqvkH36xokqoPCV1emaKnF4QvZtF2BCFE08A0EE61BF",
-            "trace": [
-              "Function.addPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:197:5)",
-              "Object.addLambdaPermission (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:32:13)",
-              "LambdaFunction.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events-targets/lib/lambda.ts:33:5)",
-              "Rule.addTarget (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-events/lib/rule.ts:141:32)",
-              "Project.onEvent (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:209:10)",
-              "Project.onStateChange (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:245:23)",
-              "Project.onBuildSucceeded (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:305:23)",
-              "listenToBuildEvents (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:93:20)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:48:5)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/S3Bucket": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3BucketD3C96C3A",
-            "trace": [
-              "new FileAssetParameters (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
-              "WebSpaCiCdStack.addFileAsset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/stack.ts:495:16)",
-              "new Asset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
-              "AssetCode.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:433:29)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/S3VersionKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927S3VersionKey8166E900",
-            "trace": [
-              "new FileAssetParameters (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
-              "WebSpaCiCdStack.addFileAsset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/stack.ts:495:16)",
-              "new Asset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
-              "AssetCode.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:433:29)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
-              "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
-              "Module._compile (internal/modules/cjs/loader.js:799:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
-              "Module.load (internal/modules/cjs/loader.js:666:32)",
-              "tryModuleLoad (internal/modules/cjs/loader.js:606:12)",
-              "Function.Module._load (internal/modules/cjs/loader.js:598:3)",
-              "Function.Module.runMain (internal/modules/cjs/loader.js:862:12)",
-              "internal/main/run_main_module.js:21:11"
-            ]
-          }
-        ],
-        "/dfs-web-spa-ci-cd/AssetParameters/c4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927/ArtifactHash": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersc4a4bc9d64133cb338ffd39c06db1ad17203335e3052b589c73cd87212697927ArtifactHash6C4E07A5",
-            "trace": [
-              "new FileAssetParameters (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:36)",
-              "WebSpaCiCdStack.addFileAsset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/core/lib/stack.ts:495:16)",
-              "new Asset (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
-              "AssetCode.bind (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-lambda/lib/function.ts:433:29)",
-              "PullRequestBuild.createFunction (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:51:14)",
-              "PullRequestBuild.createdLambdaHandler (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:45:33)",
-              "new PullRequestBuild (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/PullRequestBuild.ts:24:10)",
-              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:22:5)",
+              "new RecordSet (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:122:23)",
+              "new ARecord (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:159:5)",
+              "WebSPADeployment.createDnsAlias (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:94:5)",
+              "new WebSPADeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/constructs/WebSPADeployment.ts:29:10)",
+              "WebSpaCiCdStack.createDeployment (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:42:5)",
+              "new WebSpaCiCdStack (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/WebSpaCiCdStack.ts:19:10)",
               "Object.<anonymous> (/Users/bogdanbalan/Projects/ivory/web-basics-template/web/ci_cd/infrastructure/app.ts:10:1)",
               "Module._compile (internal/modules/cjs/loader.js:799:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)",
@@ -478,36 +127,40 @@
   },
   "runtime": {
     "libraries": {
-      "@aws-cdk/core": "1.15.0",
-      "@aws-cdk/cx-api": "1.15.0",
-      "@aws-cdk/aws-codecommit": "1.15.0",
-      "@aws-cdk/aws-events": "1.15.0",
-      "@aws-cdk/aws-iam": "1.15.0",
-      "@aws-cdk/region-info": "1.15.0",
-      "@aws-cdk/aws-lambda": "1.15.0",
-      "@aws-cdk/aws-cloudwatch": "1.15.0",
-      "@aws-cdk/aws-ec2": "1.15.0",
-      "@aws-cdk/aws-ssm": "1.15.0",
-      "@aws-cdk/aws-sqs": "1.15.0",
-      "@aws-cdk/aws-kms": "1.15.0",
-      "@aws-cdk/aws-s3-assets": "1.15.0",
-      "@aws-cdk/assets": "1.15.0",
-      "@aws-cdk/aws-s3": "1.15.0",
-      "@aws-cdk/aws-codebuild": "1.15.0",
-      "@aws-cdk/aws-ecr-assets": "1.15.0",
-      "@aws-cdk/aws-cloudformation": "1.15.0",
-      "@aws-cdk/aws-ecr": "1.15.0",
-      "@aws-cdk/aws-events-targets": "1.15.0",
-      "@aws-cdk/aws-ecs": "1.15.0",
-      "@aws-cdk/aws-applicationautoscaling": "1.15.0",
-      "@aws-cdk/aws-autoscaling-common": "1.15.0",
-      "@aws-cdk/aws-elasticloadbalancingv2": "1.15.0",
-      "@aws-cdk/aws-servicediscovery": "1.15.0",
-      "@aws-cdk/aws-autoscaling": "1.15.0",
-      "@aws-cdk/aws-autoscaling-hooktargets": "1.15.0",
-      "@aws-cdk/aws-sns": "1.15.0",
-      "@aws-cdk/aws-sns-subscriptions": "1.15.0",
-      "@aws-cdk/aws-logs": "1.15.0",
+      "@aws-cdk/core": "1.16.2",
+      "@aws-cdk/cx-api": "1.16.2",
+      "@aws-cdk/aws-codecommit": "1.16.2",
+      "@aws-cdk/aws-events": "1.16.2",
+      "@aws-cdk/aws-iam": "1.16.2",
+      "@aws-cdk/region-info": "1.16.2",
+      "@aws-cdk/aws-lambda": "1.16.2",
+      "@aws-cdk/aws-cloudwatch": "1.16.2",
+      "@aws-cdk/aws-ec2": "1.16.2",
+      "@aws-cdk/aws-ssm": "1.16.2",
+      "@aws-cdk/aws-sqs": "1.16.2",
+      "@aws-cdk/aws-kms": "1.16.2",
+      "@aws-cdk/aws-s3-assets": "1.16.2",
+      "@aws-cdk/assets": "1.16.2",
+      "@aws-cdk/aws-s3": "1.16.2",
+      "@aws-cdk/aws-codebuild": "1.16.2",
+      "@aws-cdk/aws-ecr-assets": "1.16.2",
+      "@aws-cdk/aws-cloudformation": "1.16.2",
+      "@aws-cdk/aws-ecr": "1.16.2",
+      "@aws-cdk/aws-events-targets": "1.16.2",
+      "@aws-cdk/aws-ecs": "1.16.2",
+      "@aws-cdk/aws-applicationautoscaling": "1.16.2",
+      "@aws-cdk/aws-autoscaling-common": "1.16.2",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.16.2",
+      "@aws-cdk/aws-servicediscovery": "1.16.2",
+      "@aws-cdk/aws-autoscaling": "1.16.2",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.16.2",
+      "@aws-cdk/aws-sns": "1.16.2",
+      "@aws-cdk/aws-sns-subscriptions": "1.16.2",
+      "@aws-cdk/aws-logs": "1.16.2",
+      "@aws-cdk/aws-cloudfront": "1.16.2",
+      "@aws-cdk/aws-certificatemanager": "1.16.2",
+      "@aws-cdk/aws-route53": "1.16.2",
+      "@aws-cdk/aws-route53-targets": "1.16.2",
       "jsii-runtime": "node.js/v11.12.0"
     }
   }
