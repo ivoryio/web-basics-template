@@ -37,7 +37,7 @@ export class GraphQLResponse {
   }
 
   public static fatalFailure(error: Error) {
-    console.log(error)
+    console.log('FATAL ERROR', error)
     return {
       success: false,
       data: null,

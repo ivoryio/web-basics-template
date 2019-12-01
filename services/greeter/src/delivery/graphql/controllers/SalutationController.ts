@@ -14,7 +14,7 @@ export default class SalutationController {
         if (result.isSuccess) {
           return GraphQLResponse.success()
         } else {
-          GraphQLResponse.failure(result.getErrorValue()!)
+          return GraphQLResponse.failure(result.getErrorValue()!)
         }
       }
       default: {

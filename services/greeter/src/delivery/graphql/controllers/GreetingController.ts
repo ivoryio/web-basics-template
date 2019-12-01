@@ -16,7 +16,7 @@ export default class GreetingController {
             message: result.getValue()
           })
         } else {
-          GraphQLResponse.failure(result.getErrorValue()!)
+          return GraphQLResponse.failure(result.getErrorValue()!)
         }
       }
       default: {
