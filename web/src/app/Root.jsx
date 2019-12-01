@@ -1,4 +1,7 @@
 import React from "react"
+import { ApolloProvider } from "react-apollo"
+import { appsyncClient } from "./services/graphql"
+
 import { Auth } from "@user"
 import { themeFactory } from "@kogaio"
 import { ThemeProvider } from "styled-components"
@@ -8,12 +11,14 @@ import Router from "./navigation/Router"
 import { GlobalStyle } from "assets/GlobalStyle"
 
 const Root = () => (
-  <ThemeProvider theme={themeFactory(appTheme)}>
-    <Auth.AuthProvider>
-      <GlobalStyle />
-      <Router />
-    </Auth.AuthProvider>
-  </ThemeProvider>
+  <ApolloProvider client={appsyncClient}>
+    <ThemeProvider theme={themeFactory(appTheme)}>
+      <Auth.AuthProvider>
+        <GlobalStyle />
+        <Router />
+      </Auth.AuthProvider>
+    </ThemeProvider>
+  </ApolloProvider>
 )
 
 export default Root
