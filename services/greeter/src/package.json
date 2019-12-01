@@ -1,0 +1,7 @@
+{
+  "name": "ivoryts",
+  "version": "0.1.0",
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}

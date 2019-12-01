@@ -1,0 +1,41 @@
+{
+  "name": "greeter",
+  "version": "0.1.0",
+  "scripts": {
+    "cdk": "cdk",
+    "test": "jest --watch --maxWorkers=100%",
+    "watch": "tsc -w",
+    "build": "rm -rf ./build && tsc && cp ./src/package.json ./build/src/package.json && cd ./build/src && npm i && rm -rf ./node_modules/.bin",
+    "nuke": "cdk destroy --app 'node build/infrastructure/index.js' xxx-greeter-service --output 'build/cdk.out'",
+    "cdk:diff": "npm run cdk:synth && cdk diff --app 'node build/infrastructure/index.js'",
+    "deploy": "npm run build && cdk deploy --app 'node build/infrastructure/index.js' xxx-greeter-service --output 'build/cdk.out' --strict",
+    "cdk:synth": "npm run build && cdk synth --app 'node build/infrastructure/index.js' --output 'build/cdk.out' --strict"
+  },
+  "devDependencies": {
+    "@types/uuid": "^3.4.6",
+    "@types/npm": "^2.0.31",
+    "@types/faker": "^4.1.7",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.3",
+    "@aws-cdk/assert": "^1.15.0",
+    "uuid": "^3.3.3",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "aws-cdk": "^1.15.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.6.4",
+    "jest-html-reporters": "^1.2.0",
+    "@aws-cdk/core": "^1.18.0",
+    "@aws-cdk/aws-s3": "^1.18.0",
+    "@aws-cdk/aws-sns": "^1.18.0",
+    "@aws-cdk/aws-sqs": "^1.18.0",
+    "@aws-cdk/aws-ssm": "^1.18.0",
+    "@aws-cdk/aws-lambda": "^1.18.0",
+    "@aws-cdk/aws-dynamodb": "^1.18.0",
+    "@aws-cdk/aws-codebuild": "^1.18.0",
+    "@aws-cdk/aws-apigateway": "^1.18.0",
+    "@aws-cdk/aws-codecommit": "^1.18.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.18.0"
+  }
+}

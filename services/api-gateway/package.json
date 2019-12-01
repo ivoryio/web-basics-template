@@ -1,0 +1,24 @@
+{
+  "name": "api-gateway",
+  "version": "0.1.0",
+  "scripts": {
+    "cdk": "cdk",
+    "watch": "tsc -w",
+    "build": "rm -rf ./build && tsc",
+    "nuke": "cdk destroy --app 'node build/app.js' xxx-api-gateway-service --output 'build/cdk.out'",
+    "cdk:diff": "npm run cdk:synth && cdk diff --app 'node build/app.js'",
+    "deploy": "npm run build && cdk deploy --app 'node build/app.js' xxx-api-gateway-service --output 'build/cdk.out' --strict",
+    "cdk:synth": "npm run build && cdk synth --app 'node build/app.js' --output 'build/cdk.out' --strict"
+  },
+  "devDependencies": {
+    "aws-cdk": "^1.15.0",
+    "typescript": "^3.6.4",
+    "@types/uuid": "^3.4.6",
+    "@types/npm": "^2.0.31",
+    "@types/node": "^12.12.3",
+    "@aws-cdk/core": "^1.18.0",
+    "@aws-cdk/aws-iam": "^1.18.0",
+    "@aws-cdk/aws-ssm": "^1.18.0",
+    "@aws-cdk/aws-appsync": "^1.18.0"
+  }
+}

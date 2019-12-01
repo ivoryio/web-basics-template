@@ -2,7 +2,7 @@ import * as cdk from '@aws-cdk/core'
 import * as shortUUID from 'short-uuid'
 import * as codecommit from '@aws-cdk/aws-codecommit'
 import { PullRequestBuild } from './constructs/PullRequestBuild'
-import { WebSPADeploymentEnvironment } from './constructs/WebSPADeployment'
+import { WebSPA } from './constructs/WebSPADeployment'
 
 export interface IWebSpaCiCdStackProps extends cdk.StackProps {
   projectName: string
@@ -39,7 +39,7 @@ export class WebSpaCiCdStack extends cdk.Stack {
   }
 
   private createDeployment(stage: 'staging' | 'production') {
-    new WebSPADeploymentEnvironment(this, shortUUID.generate(), {
+    new WebSPA.DeploymentEnvironment(this, shortUUID.generate(), {
       dnsInfo: {
         recordName: 'staging',
         appDomainName: 'ivory.io',

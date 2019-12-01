@@ -27,6 +27,8 @@
     "@aws-cdk/aws-cloudfront": "^1.16.2",
     "@aws-cdk/aws-codebuild": "^1.16.2",
     "@aws-cdk/aws-codecommit": "^1.16.2",
+    "@aws-cdk/aws-codepipeline": "^1.16.2",
+    "@aws-cdk/aws-codepipeline-actions": "^1.16.2",
     "@aws-cdk/aws-dynamodb": "^1.16.2",
     "@aws-cdk/aws-events-targets": "^1.16.2",
     "@aws-cdk/aws-iam": "^1.16.2",
