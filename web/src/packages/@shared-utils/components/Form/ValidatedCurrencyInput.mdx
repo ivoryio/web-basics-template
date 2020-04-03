@@ -1,0 +1,39 @@
+```jsx
+import { Flex, Space, Typography } from '@kogaio'
+import { ActionButtons, Form } from '@shared-utils/components'
+import { emailFormat } from '@shared-utils/funcs'
+
+const ValidatedInputExamples = () => {
+  return (
+    <Flex justifyContent='center' width={1}>
+      <Form
+        initialValues={{ amount: 0 }}
+        onSubmit={(values, helpers) => {
+          helpers.setSubmitting(false)
+          alert(JSON.stringify(values, null, 4))
+        }}>
+        {({ isSubmitting, resetForm, values }) => (
+          <Space mt={5}>
+            <Form.CurrencyInput
+              autoComplete='nope'
+              id='currency-example'
+              label='Amount'
+              name='amount'
+              placeholder='Provide your amount'
+              required
+            />
+            <Space mt={4}>
+              <ActionButtons
+                saveLabel='Grab'
+                cancel={resetForm}
+                loading={isSubmitting}
+              />
+            </Space>
+          </Space>
+        )}
+      </Form>
+    </Flex>
+  )
+}
+;<ValidatedInputExamples />
+```

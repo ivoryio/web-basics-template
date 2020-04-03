@@ -1,0 +1,26 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space, Typography } from '@kogaio'
+import { Tabs } from '@shared-utils/components'
+
+const TabLinkExample = () => {
+  return (
+    <Flex flexDirection='column' width={1}>
+      <Tabs>
+        <Tabs.Link default to='tabpanel' title='TabLink' />
+        <Tabs.Panel name='tabpanel'>
+          <Space p={4}>
+            <Flex>
+              <Typography>
+                This is the default tab with TabLink and TabPanel. See props for
+                TabLink above.
+              </Typography>
+            </Flex>
+          </Space>
+        </Tabs.Panel>
+      </Tabs>
+    </Flex>
+  )
+}
+;<TabLinkExample />
+```

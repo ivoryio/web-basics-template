@@ -1,0 +1,51 @@
+```jsx
+import { useState } from 'react'
+import { Box, Flex, Space } from '@kogaio'
+import { ActionButtons, Form } from '@shared-utils/components'
+
+const dropdownItems = [
+  'Dynamically cultivate',
+  'Appropriately engineer enterprise',
+  'Conveniently disintermediate',
+  'Distinctively deliver',
+  'Efficiently pursue'
+]
+
+const ValidatedFileInputExamples = () => {
+  return (
+    <Flex justifyContent='center' width={1}>
+      <Form
+        initialValues={{ doc: null, docMultiple: null }}
+        onSubmit={(values, helpers) => {
+          helpers.setSubmitting(false)
+          alert(JSON.stringify(values, null, 4))
+        }}>
+        {({ values: { doc, docMultiple } }) => (
+          <Flex alignSelf='center' justifyContent='space-between' width={1 / 2}>
+            <Space mx={2}>
+              <Form.FileInput
+                accept='.pdf,.doc,.docx'
+                buttonLabel='Upload'
+                id='doc-example'
+                label='Upload File'
+                name='doc'
+                required
+              />
+              <Form.FileInput
+                accept='.pdf,.doc,.docx'
+                buttonLabel='Upload'
+                id='doc-example-multiple'
+                label='Upload Files'
+                multiple
+                name='docMultiple'
+                required
+              />
+            </Space>
+          </Flex>
+        )}
+      </Form>
+    </Flex>
+  )
+}
+;<ValidatedFileInputExamples />
+```

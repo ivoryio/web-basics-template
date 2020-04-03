@@ -1,0 +1,20 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space } from '@kogaio'
+
+const RoundedIconExamples = () => {
+  const [selectedCheckbox, selectCheckbox] = useState('')
+  return (
+    <Space mx='auto'>
+      <Flex alignItems='center' width={1}>
+        <RoundedIcon fontSize={2} name='edit' />
+        <Space ml={3}>
+          <RoundedIcon fontSize={3} name='visibility' />
+          <RoundedIcon fontSize={4} name='file_download' />
+        </Space>
+      </Flex>
+    </Space>
+  )
+}
+;<RoundedIconExamples />
+```

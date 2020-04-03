@@ -1,0 +1,24 @@
+```jsx
+import { useState } from 'react'
+import { Button, Flex } from '@kogaio'
+import { useBoolean } from '@shared-utils/hooks/useBoolean'
+
+const PendingOverlayExample = () => {
+  const [isVisible, setVisible] = useBoolean(false)
+
+  const simulateLoading = () => {
+    setVisible(true)
+
+    setTimeout(() => {
+      setVisible(false)
+    }, 3000)
+  }
+  return (
+    <Flex>
+      <Button onClick={simulateLoading} title='Click me' />
+      <PendingOverlay message='I am loading...' visible={isVisible} />
+    </Flex>
+  )
+}
+;<PendingOverlayExample />
+```

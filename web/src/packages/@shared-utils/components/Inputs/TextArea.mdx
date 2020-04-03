@@ -1,0 +1,23 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space } from '@kogaio/Responsive'
+
+const TextAreaExamples = () => {
+  const [value, setValue] = useState([])
+  return (
+    <Space mx='auto'>
+      <Flex alignItems='center' justifyContent='center' width={1 / 2}>
+        <TextArea
+          autoComplete='nope'
+          containerStyle={{ width: 1 }}
+          id='tag-input-example'
+          onChange={ev => setValue(ev.target.value)}
+          placeholder='Your text here'
+          value={value}
+        />
+      </Flex>
+    </Space>
+  )
+}
+;<TextAreaExamples />
+```

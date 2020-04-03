@@ -1,0 +1,38 @@
+```jsx
+import { useState } from 'react'
+import { Card, Flex, Space, Typography } from '@kogaio'
+
+const BlurOverlayExample = () => {
+  return (
+    <Space mx='auto'>
+      <Flex justifyContent='space-between' width={1 / 2}>
+        <Space p={4}>
+          <Card minHeight='300px' position='relative' variant='white' width={1}>
+            <Typography variant='paragraph'>
+              Uniquely utilize extensible vortals with an expanded array of
+              solutions. Objectively deploy end-to-end solutions for efficient
+              convergence. Monotonectally fashion user-centric infomediaries via
+              best-of-breed catalysts for change. Progressively build front-end
+              catalysts for change before emerging opportunities. Professionally
+              predominate maintainable architectures whereas cost effective
+              process improvements. Intrinsicly strategize compelling metrics
+              after magnetic manufactured products. Monotonectally aggregate
+              effective e-commerce and error-free intellectual capital.
+              Energistically procrastinate end-to-end leadership skills after
+              standardized models. Professionally morph superior solutions
+              through strategic infomediaries. Efficiently monetize client-based
+              users before dynamic convergence.
+            </Typography>
+            <BlurOverlay
+              cover='partial'
+              title='Upgrade to see the full power of Starterkit'
+              visible
+            />
+          </Card>
+        </Space>
+      </Flex>
+    </Space>
+  )
+}
+;<BlurOverlayExample />
+```

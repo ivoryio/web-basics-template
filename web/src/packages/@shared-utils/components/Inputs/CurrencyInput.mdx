@@ -1,0 +1,19 @@
+```jsx
+import { useState } from 'react'
+import { Flex } from '@kogaio'
+
+const CurrencyInputExamples = () => {
+  const [value, setValue] = useState()
+  return (
+    <Flex width={1 / 2}>
+      <CurrencyInput
+        onChange={ev => setValue(ev.target.value)}
+        id='currency-input-example'
+        label='Example currency'
+        value={value}
+      />
+    </Flex>
+  )
+}
+;<CurrencyInputExamples />
+```

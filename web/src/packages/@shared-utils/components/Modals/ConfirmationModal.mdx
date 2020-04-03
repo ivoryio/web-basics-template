@@ -1,0 +1,20 @@
+```jsx
+import { useState } from 'react'
+import { Box, Button } from '@kogaio'
+import { useBoolean } from '@shared-utils/hooks/useBoolean'
+
+const ConfirmationModalExample = () => {
+  const [isVisible, setVisible] = useBoolean(false)
+  return (
+    <Box>
+      <Button onClick={() => setVisible(true)} title='Show modal' />
+      <ConfirmationModal
+        hide={() => setVisible(false)}
+        title='This is a confirmation modal'
+        visible={isVisible}
+      />
+    </Box>
+  )
+}
+;<ConfirmationModalExample />
+```

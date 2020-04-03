@@ -1,0 +1,21 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space } from '@kogaio'
+import { useBoolean } from '@shared-utils/hooks/useBoolean'
+
+const NameAvatarExamples = () => {
+  const [isVisible, setVisible] = useBoolean(false)
+  return (
+    <Space mx='auto'>
+      <Flex alignItems='center' width={1}>
+        <Space mx={2}>
+          <NameAvatar initials='AA' size={32} />
+          <NameAvatar initials='BB' size={40} variant='h5' />
+          <NameAvatar initials='MR' size={48} variant='h4' />
+        </Space>
+      </Flex>
+    </Space>
+  )
+}
+;<NameAvatarExamples />
+```

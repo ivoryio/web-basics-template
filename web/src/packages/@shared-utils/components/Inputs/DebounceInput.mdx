@@ -1,0 +1,51 @@
+```jsx
+import { useState } from 'react'
+import { Box, Flex, Space, Typography } from '@kogaio'
+
+const mockedData = [
+  'Assertively iterate cross-platform',
+  'Completely pursue mission-critical',
+  'Efficiently synergize just',
+  'Distinctively evisculate'
+]
+
+const DebounceInputExample = () => {
+  const [value, setValue] = useState(mockedData)
+
+  const handleMockResult = searchTerm => {
+    if (searchTerm.length > 0) {
+      const results = mockedData.filter(result =>
+        result.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      return setValue(results)
+    }
+    return setValue(mockedData)
+  }
+
+  return (
+    <Flex flexDirection='column' width={1 / 2}>
+      <DebounceInput
+        icLeft='search'
+        id='debounce-input-example'
+        onChange={handleMockResult}
+        label='Debounce example'
+        placeholder='Start typing something'
+      />
+      <Box>
+        {value.length > 0 ? (
+          value.map((val, ix) => (
+            <Space py={1}>
+              <Typography key={val} variant='paragraph'>
+                {ix + 1}.{val}
+              </Typography>
+            </Space>
+          ))
+        ) : (
+          <Typography variant='caption'>No results found matching your search term.</Typography>
+        )}
+      </Box>
+    </Flex>
+  )
+}
+;<DebounceInputExample />
+```

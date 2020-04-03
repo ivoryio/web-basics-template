@@ -1,0 +1,32 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space, Typography } from '@kogaio'
+
+const TabsExample = () => {
+  return (
+    <Flex flexDirection='column' width={1}>
+      <Tabs>
+        <Tabs.Link default to='initial' title='Primary' />
+        <Tabs.Link to='secondary' title='Secondary' />
+        <Tabs.Link to='tertiary' title='Tertiary' />
+        <Tabs.Panel name='initial'>
+          <Space p={4}>
+            <Flex>This is the default tab</Flex>
+          </Space>
+        </Tabs.Panel>
+        <Tabs.Panel name='secondary'>
+          <Space p={4}>
+            <Flex>Hey! You've just discovered the second tab!</Flex>
+          </Space>
+        </Tabs.Panel>
+        <Tabs.Panel name='tertiary'>
+          <Space p={4}>
+            <Flex>Yes, yes, this is the third tab.</Flex>
+          </Space>
+        </Tabs.Panel>
+      </Tabs>
+    </Flex>
+  )
+}
+;<TabsExample />
+```

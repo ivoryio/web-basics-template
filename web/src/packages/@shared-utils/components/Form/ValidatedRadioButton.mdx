@@ -1,0 +1,63 @@
+```jsx
+import { Box, Flex, Space } from '@kogaio'
+import { ActionButtons, Form } from '@shared-utils/components'
+
+const dropdownItems = [
+  'Dynamically cultivate',
+  'Appropriately engineer enterprise',
+  'Conveniently disintermediate',
+  'Distinctively deliver',
+  'Efficiently pursue'
+]
+
+const ValidatedRadioButtonExamples = () => {
+  return (
+    <Flex justifyContent='center' width={1}>
+      <Form
+        initialValues={{ gender: '' }}
+        onSubmit={(values, helpers) => {
+          helpers.setSubmitting(false)
+          alert(JSON.stringify(values, null, 4))
+        }}>
+        {({ isSubmitting, resetForm, values: { gender } }) => (
+          <Box>
+            <Flex>
+              <Form.RadioButton
+                id='radio-button-example1'
+                name='gender'
+                label='Non-binary'
+                value='non-binary'
+                required
+              />
+              <Space ml={3}>
+                <Form.RadioButton
+                  id='radio-button-example2'
+                  name='gender'
+                  label='Male'
+                  value='male'
+                  required
+                />
+                <Form.RadioButton
+                  id='radio-button-example3'
+                  name='gender'
+                  label='Female'
+                  value='female'
+                  required
+                />
+              </Space>
+            </Flex>
+            <Space mt={4}>
+              <ActionButtons
+                saveLabel='Create'
+                cancel={resetForm}
+                loading={isSubmitting}
+              />
+            </Space>
+          </Box>
+        )}
+      </Form>
+    </Flex>
+  )
+}
+;<ValidatedRadioButtonExamples />
+```

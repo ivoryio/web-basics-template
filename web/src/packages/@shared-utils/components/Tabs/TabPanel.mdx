@@ -1,0 +1,25 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space, Typography } from '@kogaio'
+import { Tabs } from '@shared-utils/components'
+
+const TabPanelExample = () => {
+  return (
+    <Flex flexDirection='column' width={1}>
+      <Tabs>
+        <Tabs.Link default to='tabpanel' title='TabLink' />
+        <Tabs.Panel name='tabpanel'>
+          <Space p={4}>
+            <Flex>
+              <Typography>
+                TabPanel here. See props for TabPanel above.
+              </Typography>
+            </Flex>
+          </Space>
+        </Tabs.Panel>
+      </Tabs>
+    </Flex>
+  )
+}
+;<TabPanelExample />
+```

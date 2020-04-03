@@ -1,0 +1,15 @@
+```jsx
+import { Flex, Space } from '@kogaio/Responsive'
+
+const PromptButtonsExamples = () => {
+  return (
+    <Flex alignItems='center' justifyContent='center'>
+      <PromptButtons
+        onCancel={() => alert('Cancelling')}
+        onEdit={() => alert('Saving')}
+      />
+    </Flex>
+  )
+}
+;<PromptButtonsExamples />
+```

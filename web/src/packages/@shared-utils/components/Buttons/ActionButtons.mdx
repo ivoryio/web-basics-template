@@ -1,0 +1,24 @@
+```jsx
+import { Flex, Space } from '@kogaio/Responsive'
+
+const ActionButtonsExamples = () => {
+  return (
+    <Flex alignItems='center' justifyContent='space-between' width={3 / 4}>
+      <ActionButtons
+        cancel={() => alert('Cancelling')}
+        disabled
+        save={() => alert('Saving...')}
+        saveLabel='Submit'
+      />
+      <Space ml={3}>
+        <ActionButtons
+          cancel={() => alert('Cancelling')}
+          save={() => alert('Saving...')}
+          saveLabel='Add'
+        />
+      </Space>
+    </Flex>
+  )
+}
+;<ActionButtonsExamples />
+```

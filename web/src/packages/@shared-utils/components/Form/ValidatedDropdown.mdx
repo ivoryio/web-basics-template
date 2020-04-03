@@ -1,0 +1,52 @@
+```jsx
+import { useState } from 'react'
+import { Box, Flex, Space } from '@kogaio'
+import { ActionButtons, Form } from '@shared-utils/components'
+
+const dropdownItems = [
+  'Dynamically cultivate',
+  'Appropriately engineer enterprise',
+  'Conveniently disintermediate',
+  'Distinctively deliver',
+  'Efficiently pursue'
+]
+
+const FormExamples = () => {
+  return (
+    <Flex justifyContent='center' width={1}>
+      <Form
+        initialValues={{ category: '' }}
+        onSubmit={(values, helpers) => {
+          helpers.setSubmitting(false)
+          alert(JSON.stringify(values, null, 4))
+        }}>
+        {({ isSubmitting, resetForm, status, values }) => (
+          <Box>
+            <Form.Dropdown
+              autoComplete='nope'
+              id='category-example'
+              label='Category'
+              name='category'
+              noBottomSpace
+              required>
+              {dropdownItems.map(cat => (
+                <Form.DropdownOption key={cat} value={cat}>
+                  {cat}
+                </Form.DropdownOption>
+              ))}
+            </Form.Dropdown>
+            <Space mt={4}>
+              <ActionButtons
+                saveLabel='Check'
+                cancel={resetForm}
+                loading={isSubmitting}
+              />
+            </Space>
+          </Box>
+        )}
+      </Form>
+    </Flex>
+  )
+}
+;<FormExamples />
+```

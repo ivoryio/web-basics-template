@@ -1,0 +1,41 @@
+```jsx
+import { useState } from 'react'
+import { Flex, Space } from '@kogaio/Responsive'
+
+const FileInputExamples = () => {
+  const [file, selectFile] = useState(null)
+  const [multiFiles, selectFiles] = useState(null)
+
+  const _removeSingleFile = targetFile =>
+    selectFiles(prevSelected => ({
+      ...Object.values(prevSelected).filter(
+        selected => selected.name !== targetFile.name
+      )
+    }))
+
+  return (
+    <Space mx='auto'>
+      <Flex justifyContent='space-between' width={1 / 2}>
+        <FileInput
+          accept='.doc,.docx,.pdf,.png,.jpg'
+          id='example-file-sinngle'
+          label='Single File'
+          name='fileExampleSignle'
+          onChange={file => selectFile(file)}
+          value={file}
+        />
+        <FileInput
+          accept='.doc,.docx,.pdf,.png,.jpg'
+          id='example-file-multi'
+          label='Multiple files'
+          multiple
+          name='fileExampleMulti'
+          onChange={files => selectFiles(files)}
+          value={multiFiles}
+        />
+      </Flex>
+    </Space>
+  )
+}
+;<FileInputExamples />
+```

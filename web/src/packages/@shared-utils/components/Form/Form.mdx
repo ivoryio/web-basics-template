@@ -1,0 +1,62 @@
+```jsx
+import { Flex, Space, Typography } from '@kogaio'
+import { ActionButtons } from '@shared-utils/components'
+
+const dropdownItems = [
+  'Dynamically cultivate',
+  'Appropriately engineer enterprise',
+  'Conveniently disintermediate',
+  'Distinctively deliver',
+  'Efficiently pursue'
+]
+
+const FormExamples = () => {
+  return (
+    <Flex justifyContent='center' width={1}>
+      <Form
+        initialValues={{ name: '', category: '' }}
+        onSubmit={(values, helpers) => {
+          helpers.setSubmitting(false)
+          alert(JSON.stringify(values, null, 4))
+        }}>
+        {({ isSubmitting, resetForm, status, values }) => (
+          <Space mt={5}>
+            <Typography color='error' variant='h6'>
+              {status}
+            </Typography>
+            <Form.Input
+              autoComplete='nope'
+              id='input-name-example'
+              label='Name'
+              name='name'
+              placeholder='Name'
+              required
+            />
+            <Form.Dropdown
+              autoComplete='nope'
+              id='category-example'
+              label='Category'
+              name='category'
+              noBottomSpace
+              required>
+              {dropdownItems.map(cat => (
+                <Form.DropdownOption key={cat} value={cat}>
+                  {cat}
+                </Form.DropdownOption>
+              ))}
+            </Form.Dropdown>
+            <Space mt={4}>
+              <ActionButtons
+                saveLabel='Create'
+                cancel={resetForm}
+                loading={isSubmitting}
+              />
+            </Space>
+          </Space>
+        )}
+      </Form>
+    </Flex>
+  )
+}
+;<FormExamples />
+```

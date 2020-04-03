@@ -1,0 +1,25 @@
+```jsx
+import { Flex, Space } from '@kogaio/Responsive'
+
+const ActiveButtonExamples = () => {
+  return (
+    <Flex alignItems='center' justifyContent='center'>
+      <ActiveButton
+        onClick={() => alert('Clicked!')}
+        label='Publish'
+        icon='publish'
+        icRounded
+      />
+      <Space ml={3}>
+        <ActiveButton
+          disabled
+          onClick={() => alert('Clicked!')}
+          label='Delete'
+          icon='delete_forever'
+        />
+      </Space>
+    </Flex>
+  )
+}
+;<ActiveButtonExamples />
+```

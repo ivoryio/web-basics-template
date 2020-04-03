@@ -1,0 +1,20 @@
+```jsx
+import { useState } from 'react'
+import { Box, Flex, Space } from '@kogaio'
+import { useBoolean } from '@shared-utils/hooks/useBoolean'
+
+const LogoExamples = () => {
+  const [isVisible, setVisible] = useBoolean(false)
+  return (
+    <Space mx='auto'>
+      <Flex alignItems='center' width={1}>
+        <Logo color='error' height='84' variant='short' width='40' />
+        <Space ml={3}>
+          <Logo color='info' height='44' variant='full' width='120' />
+        </Space>
+      </Flex>
+    </Space>
+  )
+}
+;<LogoExamples />
+```

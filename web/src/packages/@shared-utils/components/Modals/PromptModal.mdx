@@ -1,0 +1,29 @@
+```jsx
+import { useState } from 'react'
+import { Button, Flex } from '@kogaio'
+import { useBoolean } from '@shared-utils/hooks/useBoolean'
+
+const PromptModalExample = () => {
+  const [isVisible, setVisible] = useBoolean(false)
+
+  return (
+    <Flex>
+      <Button
+        onClick={() => setVisible(true)}
+        title='Click me'
+        variant='outline'
+      />
+      <PromptModal
+        destructive
+        id='trigger-prompt-example'
+        hide={() => setVisible(false)}
+        submit={() => setVisible(false)}
+        submitTitle='Yes, confirm'
+        title='Are you sure you wish to continue with your action?'
+        visible={isVisible}
+      />
+    </Flex>
+  )
+}
+;<PromptModalExample />
+```
