@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from "react"
 import Auth from "@aws-amplify/auth"
-import { getQueryParam } from "@shared/funcs"
+import { getQueryParam } from "@shared-utils/funcs"
 
 export const withSignIn = SignIn => ({ onStateChange, navigate, ...props }) => {
   const signIn = async ({ email, password }, actions) => {

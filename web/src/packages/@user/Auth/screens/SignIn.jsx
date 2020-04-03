@@ -16,7 +16,7 @@ import {
 
 import icons from "@user/assets/icons"
 
-import { ValidatedInput } from "@shared/components"
+import { ValidatedInput } from "@shared-utils/components"
 import { hasValue, isEmail } from "../validators"
 import { withSignIn } from "../decorators/withSignIn"
 

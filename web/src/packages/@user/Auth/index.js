@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { getQueryParam } from "@shared/funcs"
 import { Authenticator } from "aws-amplify-react"
+import { getQueryParam } from "@shared-utils/funcs"
 
 import { SignIn, SignUp } from "./screens"
 import { AuthProvider, AuthContext } from "./AuthContext"

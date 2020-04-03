@@ -14,7 +14,7 @@ import {
 
 import icons from "@user/assets/icons"
 import { withSignUp } from "../decorators/withSignUp"
-import { ValidatedInput } from "@shared/components"
+import { ValidatedInput } from "@shared-utils/components"
 import { isEmail, isPassword, hasValue } from "../validators"
 
 const SignUp = ({
