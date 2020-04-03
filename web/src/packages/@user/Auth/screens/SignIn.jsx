@@ -16,8 +16,8 @@ import {
 
 import icons from "@user/assets/icons"
 
-import { hasValue, isEmail } from "../validators"
 import { ValidatedInput } from "@shared/components"
+import { hasValue, isEmail } from "../validators"
 import { withSignIn } from "../decorators/withSignIn"
 
 const SignIn = ({
@@ -59,7 +59,7 @@ const SignIn = ({
                 password: ""
               }}
               onSubmit={requestSignIn}
-              render={({
+              >{({
                 handleSubmit,
                 isSubmitting,
                 status,
@@ -104,7 +104,7 @@ const SignIn = ({
                   </Form>
                 </Space>
               )}
-            />
+            </Formik>
           </Box>
           <Space mt={3}>
             <Touchable

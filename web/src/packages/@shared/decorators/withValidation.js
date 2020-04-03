@@ -20,7 +20,7 @@ export const withValidation = Component => props => {
     <Field
       name={name}
       validate={_validateField}
-      render={({ field, form: { touched, errors }, ...rest }) => {
+      >{({ field, form: { touched, errors }, ...rest }) => {
         const fieldProps = {
           ...field,
           ...rest,
@@ -32,6 +32,6 @@ export const withValidation = Component => props => {
         
         return <Component {...fieldProps} />
       }}
-    />
+    </Field>
   )
 }

@@ -56,7 +56,7 @@ const SignUp = ({
               familyName: ""
             }}
             onSubmit={requestSignUp}
-            render={({
+            >{({
               handleSubmit,
               isSubmitting,
               status,
@@ -148,7 +148,7 @@ const SignUp = ({
                 </Form>
               </Space>
             )}
-          />
+          </Formik>
           <Space mt={4}>
             <Touchable effect='opacity' onClick={() => onStateChange("signIn")}>
               <Typography variant='link'>

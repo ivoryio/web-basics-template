@@ -3,7 +3,7 @@ import { ApolloProvider } from "react-apollo"
 import { appsyncClient } from "./services/graphql"
 
 import { Auth } from "@user"
-import { themeFactory } from "@kogaio"
+import { buildTheme } from "@kogaio/utils"
 import { ThemeProvider } from "styled-components"
 
 import appTheme from "assets/theme"
@@ -12,7 +12,7 @@ import { GlobalStyle } from "assets/GlobalStyle"
 
 const Root = () => (
   <ApolloProvider client={appsyncClient}>
-    <ThemeProvider theme={themeFactory(appTheme)}>
+    <ThemeProvider theme={buildTheme(appTheme)}>
       <Auth.AuthProvider>
         <GlobalStyle />
         <Router />
