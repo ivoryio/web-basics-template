@@ -4,7 +4,7 @@ export const ADD_GREETING = gql`
   mutation($input: SaveSalutationInput!) {
     saveSalutation(input: $input) {
       error {
-        code 
+        code
         message
       }
       success

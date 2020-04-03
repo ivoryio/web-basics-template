@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react"
 
-import { Field } from 'formik'
-import { required as requiredRule } from '../../funcs/validators'
+import { Field } from "formik"
+import { required as requiredRule } from "../../funcs/validators"
 
 export const withFieldValidation = (Component, defaultValidations = []) => ({
   name,
@@ -13,8 +13,8 @@ export const withFieldValidation = (Component, defaultValidations = []) => ({
       ? [requiredRule, ...defaultValidations, ...validate]
       : validate
     return validationRules.length > 0
-      ? validationRules.reduce((acc, fn) => acc || fn(value), '')
-      : ''
+      ? validationRules.reduce((acc, fn) => acc || fn(value), "")
+      : ""
   }
 
   return (

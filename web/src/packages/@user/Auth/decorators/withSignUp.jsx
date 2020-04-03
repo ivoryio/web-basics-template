@@ -16,8 +16,8 @@ export const withSignUp = SignUp => ({ onStateChange, ...props }) => {
         username: email,
         password,
         attributes: {
-          given_name: firstName, /* eslint camelcase: 0 */
-          family_name: familyName 
+          given_name: firstName /* eslint camelcase: 0 */,
+          family_name: familyName
         }
       })
 

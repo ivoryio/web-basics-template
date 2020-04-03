@@ -5,7 +5,7 @@ import { Auth } from "@user"
 
 const AuthScreen = props => (
   <AuthContainer>
-    <Auth.SignInSignUp {...props}/>
+    <Auth.SignInSignUp {...props} />
   </AuthContainer>
 )
 

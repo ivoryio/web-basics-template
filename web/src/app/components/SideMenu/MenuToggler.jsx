@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
-import { Flex, Icon, Space, Touchable, Typography } from '@kogaio'
+import { Flex, Icon, Space, Touchable, Typography } from "@kogaio"
 
 const MenuToggler = ({ isExpanded, toggleMenu, ...props }) => (
   <Flex
@@ -12,13 +12,15 @@ const MenuToggler = ({ isExpanded, toggleMenu, ...props }) => (
     borderColor='sidemenu-item'
     height='40px'
     width={1}
-    {...props}>
+    {...props}
+  >
     <Touchable
       alignItems='center'
       effect='opacity'
       display='flex'
       onClick={toggleMenu}
-      title='Toggle Menu'>
+      title='Toggle Menu'
+    >
       <ToggleIcon
         fontSize={2}
         color='sidemenu-item'
@@ -36,7 +38,7 @@ const MenuToggler = ({ isExpanded, toggleMenu, ...props }) => (
 
 const Title = styled(Typography)`
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
+  visibility: ${({ isVisible }) => (isVisible ? "visible" : "hidden")};
 `
 
 const ToggleIcon = styled(Icon)`

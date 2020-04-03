@@ -1,20 +1,20 @@
-import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
+import React, { useMemo } from "react"
+import PropTypes from "prop-types"
 
-import { Chip, Flex, IconButton, Space, Typography } from '@kogaio'
-import { getFileExtension } from '../../../funcs'
+import { Chip, Flex, IconButton, Space, Typography } from "@kogaio"
+import { getFileExtension } from "../../../funcs"
 
 const SelectedFileTag = ({ file, onDiscard: discardFile, ...props }) => {
   const chipName = useMemo(() => {
     const fileExtension = getFileExtension(file.name.toLowerCase())
     switch (fileExtension) {
-      case 'doc':
-      case 'docx':
-        return 'DOCUMENT'
-      case 'pdf':
-        return 'PDF'
+      case "doc":
+      case "docx":
+        return "DOCUMENT"
+      case "pdf":
+        return "PDF"
       default:
-        return 'FILE'
+        return "FILE"
     }
   }, [file.name])
 

@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import { useField } from "formik"
 
-import { FileInput } from '../Inputs/FileInput'
+import { FileInput } from "../Inputs/FileInput"
 
-import { withFieldValidation } from './withFieldValidation'
+import { withFieldValidation } from "./withFieldValidation"
 
 const ValidatedFileInput = props => {
   const [

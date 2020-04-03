@@ -1,9 +1,9 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
-import { Box } from '@kogaio/Responsive'
-import { ConditionalWrap, themeGet } from '@kogaio/utils'
+import React from "react"
+import PropTypes from "prop-types"
+import styled, { keyframes } from "styled-components"
+import { Box } from "@kogaio/Responsive"
+import { ConditionalWrap, themeGet } from "@kogaio/utils"
 
 const Skeleton = ({
   bg,
@@ -23,14 +23,15 @@ const Skeleton = ({
       <SkeletonItem
         as='span'
         background={bg}
-        borderRadius={width && height && round ? 'round' : 4}
+        borderRadius={width && height && round ? "round" : 4}
         className={`skeleton-item ${className}`}
         duration={duration}
         height={height}
         highlight={highlight}
         key={ix}
         width={width || 1}
-        {...passedProps}>
+        {...passedProps}
+      >
         &zwnj;
       </SkeletonItem>
     )
@@ -38,7 +39,7 @@ const Skeleton = ({
 
   return (
     <ConditionalWrap
-      condition={typeof Wrapper === 'function'}
+      condition={typeof Wrapper === "function"}
       wrap={() =>
         elements.map(el => (
           <Wrapper key={el}>
@@ -46,7 +47,8 @@ const Skeleton = ({
             &zwnj;
           </Wrapper>
         ))
-      }>
+      }
+    >
       {elements}
     </ConditionalWrap>
   )
@@ -60,8 +62,8 @@ export const skeletonKeyframes = keyframes`
     background-position: calc(100% + 200px) 0;
   }
 `
-const background = ({ bg }) => themeGet('Skeleton.background', bg)
-const highlight = ({ highlight }) => themeGet('Skeleton.highlight', highlight)
+const background = ({ bg }) => themeGet("Skeleton.background", bg)
+const highlight = ({ highlight }) => themeGet("Skeleton.highlight", highlight)
 
 export const SkeletonItem = styled(Box)`
   animation: ${skeletonKeyframes} ${({ duration }) => String(duration)}s

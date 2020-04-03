@@ -1,12 +1,12 @@
-export * from './Labels'
-export * from './Buttons'
-export * from './Modals'
-export * from './Inputs'
-export * from './Form'
-export * from './Skeletons'
+export * from "./Labels"
+export * from "./Buttons"
+export * from "./Modals"
+export * from "./Inputs"
+export * from "./Form"
+export * from "./Skeletons"
 
-export { default as Logo } from './Logo'
-export { default as RadioButton } from './RadioButton'
-export { default as RoundedIcon } from './RoundedIcon'
-export { default as Skeleton } from './Skeleton'
-export { Tabs } from './Tabs'
+export { default as Logo } from "./Logo"
+export { default as RadioButton } from "./RadioButton"
+export { default as RoundedIcon } from "./RoundedIcon"
+export { default as Skeleton } from "./Skeleton"
+export { Tabs } from "./Tabs"

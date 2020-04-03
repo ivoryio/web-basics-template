@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Flex, Modal, Space, Typography } from '@kogaio'
-import Logo from '../../Logo'
+import React from "react"
+import PropTypes from "prop-types"
+import { Flex, Modal, Space, Typography } from "@kogaio"
+import Logo from "../../Logo"
 
 const Dropzone = ({ logo: { color, height, width }, fontSize, visible }) => (
   <Modal
@@ -12,7 +12,8 @@ const Dropzone = ({ logo: { color, height, width }, fontSize, visible }) => (
     position='absolute'
     top={0}
     left={0}
-    visible={visible}>
+    visible={visible}
+  >
     <Flex alignItems='center' bg='white' flexDirection='column'>
       <Logo color={color} height={height} width={width} />
       <Space mt={3}>
@@ -37,9 +38,9 @@ Dropzone.propTypes = {
 Dropzone.defaultProps = {
   fontSize: 2,
   logo: {
-    color: 'brand',
-    height: '30',
-    width: '26'
+    color: "brand",
+    height: "30",
+    width: "26"
   }
 }
 

@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import { useField } from "formik"
 
-import TextArea from '../Inputs/TextArea'
-import { withFieldValidation } from './withFieldValidation'
+import TextArea from "../Inputs/TextArea"
+import { withFieldValidation } from "./withFieldValidation"
 
 const ValidatedTextArea = props => {
   const [field, { error, touched, ...meta }] = useField(props)

@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { themed } from '@kogaio/utils'
-import { Flex } from '@kogaio/Responsive'
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { themed } from "@kogaio/utils"
+import { Flex } from "@kogaio/Responsive"
 
 const TabLink = ({
   children,
@@ -20,13 +20,13 @@ const TabLink = ({
 }) => {
   if (!visible) return null
   const handleClick = ev => {
-    if (typeof handleSelect === 'function') handleSelect(to, namespace)
+    if (typeof handleSelect === "function") handleSelect(to, namespace)
 
-    if (typeof onClick === 'function') onClick(ev)
+    if (typeof onClick === "function") onClick(ev)
   }
 
   const handleKeyPress = ev => {
-    if (ev.key === ' ' || ev.key === 'Enter') {
+    if (ev.key === " " || ev.key === "Enter") {
       ev.preventDefault()
       handleClick(ev)
     }
@@ -43,7 +43,8 @@ const TabLink = ({
       onClick={handleClick}
       role='tab'
       title={title}
-      {...passedProps}>
+      {...passedProps}
+    >
       {title ?? children}
     </Link>
   )
@@ -57,17 +58,17 @@ const Link = styled(Flex)`
   :focus,
   :hover {
     outline: none;
-    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   }
 
-  ${themed('Tabs.Link')};
+  ${themed("Tabs.Link")};
 `
 
 TabLink.propTypes = {
   activeStyle: PropTypes.object,
   children: PropTypes.node,
   className: PropTypes.string,
-  component: PropTypes.oneOf(['a', 'button']).isRequired,
+  component: PropTypes.oneOf(["a", "button"]).isRequired,
   default: PropTypes.bool,
   disabled: PropTypes.bool,
   handleSelect: PropTypes.func,
@@ -80,9 +81,9 @@ TabLink.propTypes = {
 }
 
 TabLink.defaultProps = {
-  component: 'button',
+  component: "button",
   visible: true
 }
 
-TabLink.displayName = 'TabLink'
+TabLink.displayName = "TabLink"
 export default TabLink

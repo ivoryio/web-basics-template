@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { Flex, Icon } from '@kogaio'
-import { themeGet } from '@kogaio/utils'
+import React from "react"
+import PropTypes from "prop-types"
+import styled, { css } from "styled-components"
+import { Flex, Icon } from "@kogaio"
+import { themeGet } from "@kogaio/utils"
 
 const RoundedIcon = ({ bg, disabled, fontSize, name, ...props }) => (
   <Wrapper bg={bg} disabled={disabled} bgSize={fontSize} {...props}>
     <Icon
-      color={disabled ? 'brand25' : 'white'}
+      color={disabled ? "brand25" : "white"}
       fontSize={fontSize}
       name={name}
     />
@@ -22,8 +22,8 @@ const backgroundSize = css`
 const Wrapper = styled(Flex)`
   align-items: center;
   background-color: ${({ bg, disabled }) =>
-    themeGet(`colors.${disabled ? 'brand25' : bg}`)};
-  border-radius: ${themeGet('radii.round')};
+    themeGet(`colors.${disabled ? "brand25" : bg}`)};
+  border-radius: ${themeGet("radii.round")};
   justify-content: center;
 
   ${backgroundSize};
@@ -37,7 +37,7 @@ RoundedIcon.propTypes = {
 }
 
 RoundedIcon.defaultProps = {
-  bg: 'brand',
+  bg: "brand",
   fontSize: 0
 }
 

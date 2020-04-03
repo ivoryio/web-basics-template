@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { Button, Flex, Modal, Space, Typography } from '@kogaio'
-import { themeGet } from '@kogaio/utils'
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { Button, Flex, Modal, Space, Typography } from "@kogaio"
+import { themeGet } from "@kogaio/utils"
 
 const PromptModal = ({
   containerStyle,
@@ -32,7 +32,8 @@ const PromptModal = ({
     hide={hide}
     onBackdropClick={hide}
     visible={visible}
-    withPortal>
+    withPortal
+  >
     <Space p={16}>
       <Flex
         alignItems='center'
@@ -40,21 +41,24 @@ const PromptModal = ({
         data-testid='prompt-card'
         flexDirection='column'
         justifyContent='center'
-        {...containerStyle}>
+        {...containerStyle}
+      >
         <HeaderTitle variant='titleLight'>{headerTitle}</HeaderTitle>
         <Space mt={headerTitle ? 5 : 0}>
           <Typography
             letterSpacing='tight'
             lineHeight='title'
             textAlign='center'
-            variant='screenTitle'>
-            {title}{' '}
+            variant='screenTitle'
+          >
+            {title}{" "}
             {subtitle ? (
               <Typography
                 letterSpacing='tight'
                 lineHeight='title'
                 textAlign='center'
-                variant='screenTitle'>
+                variant='screenTitle'
+              >
                 {subtitle}
               </Typography>
             ) : null}
@@ -71,7 +75,7 @@ const PromptModal = ({
                   disabled={disabled}
                   title='No, take me back'
                   onClick={hide}
-                  variant={destructive ? 'primary' : 'outline'}
+                  variant={destructive ? "primary" : "outline"}
                 />
                 <Button
                   data-testid='confirm-button'
@@ -79,7 +83,7 @@ const PromptModal = ({
                   loading={loading}
                   title={submitTitle}
                   onClick={submit}
-                  variant={destructive ? 'outline' : 'primary'}
+                  variant={destructive ? "outline" : "primary"}
                 />
               </Space>
             )}
@@ -91,7 +95,7 @@ const PromptModal = ({
 )
 
 const HeaderTitle = styled(Typography)`
-  color: ${themeGet('colors.black')};
+  color: ${themeGet("colors.black")};
 `
 
 PromptModal.propTypes = {
@@ -111,8 +115,8 @@ PromptModal.propTypes = {
 }
 
 PromptModal.defaultProps = {
-  submitTitle: 'Ok',
-  title: 'Are you sure you wish to continue?'
+  submitTitle: "Ok",
+  title: "Are you sure you wish to continue?"
 }
 
 export default PromptModal

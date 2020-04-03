@@ -1,2 +1,2 @@
 export { default as SplashScreen } from "./SplashScreen"
-export { SideMenu } from './SideMenu'
+export { SideMenu } from "./SideMenu"

@@ -34,21 +34,24 @@ const SignIn = ({
       alignItems='center'
       id='container-signin'
       justifyContent='center'
-      {...props}>
+      {...props}
+    >
       <Space mx={4} p={8}>
         <Card
           alignItems='center'
           variant='light'
           display='flex'
           flexDirection='column'
-          width={{ xs: 1, sm: 2 / 3, md: 3 / 4, lg: 1 / 3 }}>
+          width={{ xs: 1, sm: 2 / 3, md: 3 / 4, lg: 1 / 3 }}
+        >
           <Image size={120} src={icons.logo} />
           <Space mt={1}>
             <Typography
               color='dark-gunmetal'
               fontWeight='bold'
               textAlign='center'
-              variant='h2'>
+              variant='h2'
+            >
               Sign In Below!
             </Typography>
           </Space>
@@ -59,7 +62,8 @@ const SignIn = ({
                 password: ""
               }}
               onSubmit={requestSignIn}
-              >{({
+            >
+              {({
                 handleSubmit,
                 isSubmitting,
                 status,
@@ -85,7 +89,6 @@ const SignIn = ({
                       passwordView='toggle'
                       placeholder='Password'
                       type='password'
-                      
                       validate={[hasValue]}
                       value={password}
                     />
@@ -110,7 +113,8 @@ const SignIn = ({
             <Touchable
               effect='opacity'
               onClick={() => onStateChange("signUp")}
-              width={1}>
+              width={1}
+            >
               <Typography variant='link'>
                 You do not have an account yet? Sign up!
               </Typography>

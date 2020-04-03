@@ -1,14 +1,14 @@
-import React, { forwardRef, useRef } from 'react'
-import PropTypes from 'prop-types'
+import React, { forwardRef, useRef } from "react"
+import PropTypes from "prop-types"
 
-import { Formik, Form as FormikForm, FieldArray } from 'formik'
-import CurrencyInput from './ValidatedCurrencyInput'
-import Option from '@kogaio/Dropdown/Option'
-import Input from './ValidatedInput'
-import TextArea from './ValidatedTextArea'
-import Dropdown from './ValidatedDropdown'
-import FileInput from './ValidatedFileInput'
-import RadioButton from './ValidatedRadioButton'
+import { Formik, Form as FormikForm, FieldArray } from "formik"
+import CurrencyInput from "./ValidatedCurrencyInput"
+import Option from "@kogaio/Dropdown/Option"
+import Input from "./ValidatedInput"
+import TextArea from "./ValidatedTextArea"
+import Dropdown from "./ValidatedDropdown"
+import FileInput from "./ValidatedFileInput"
+import RadioButton from "./ValidatedRadioButton"
 
 /**
  * `<Form>` is a a wrapper around formik's components `<Formik>` and `<Form>`.
@@ -58,14 +58,16 @@ const Form = forwardRef(
         validateOnBlur={validateOnBlur}
         validateOnChange={validateOnChange}
         validateOnMount={validateOnMount}
-        validationSchema={validationSchema}>
+        validationSchema={validationSchema}
+      >
         {component ??
           (formProps => (
             <FormikForm
               id={id}
               ref={ref ?? formRef}
               style={formStyle}
-              noValidate>
+              noValidate
+            >
               {children(formProps)}
             </FormikForm>
           ))}

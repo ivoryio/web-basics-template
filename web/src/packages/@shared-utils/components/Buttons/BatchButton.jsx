@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
 import {
   ActivityIndicator,
@@ -8,7 +8,7 @@ import {
   Space,
   Touchable,
   Typography
-} from '@kogaio'
+} from "@kogaio"
 
 const BatchButton = ({
   disabled,
@@ -24,21 +24,22 @@ const BatchButton = ({
     effect='opacity'
     onClick={onClick}
     title={tooltip || title}
-    {...props}>
+    {...props}
+  >
     <Flex alignItems='center'>
       {isFetching ? (
         <ActivityIndicator
           colors={{
-            background: 'white',
-            primary: disabled ? 'brand25' : 'brand'
+            background: "white",
+            primary: disabled ? "brand25" : "brand"
           }}
           size={16}
         />
       ) : (
-        <Icon color={disabled ? 'brand25' : 'brand'} fontSize={3} name={icon} />
+        <Icon color={disabled ? "brand25" : "brand"} fontSize={3} name={icon} />
       )}
       <Space ml={2}>
-        <Typography color={disabled ? 'brand25' : 'brand'} variant='actionBtn'>
+        <Typography color={disabled ? "brand25" : "brand"} variant='actionBtn'>
           {title}
         </Typography>
       </Space>
@@ -56,8 +57,8 @@ BatchButton.propTypes = {
 }
 
 BatchButton.defaultProps = {
-  onClick: () => console.warn('* BatchButton expects an onClick function'),
-  title: 'Button'
+  onClick: () => console.warn("* BatchButton expects an onClick function"),
+  title: "Button"
 }
 
 export default BatchButton

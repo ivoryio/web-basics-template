@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Button, Flex, Space } from '@kogaio'
+import React from "react"
+import PropTypes from "prop-types"
+import { Button, Flex, Space } from "@kogaio"
 
 /**
  * The default type for **save button** is *submit* and does not expect an onClick.
@@ -33,7 +33,7 @@ const ActionButtons = ({
         data-testid='save-action-btn'
         loading={loading}
         title={saveLabel}
-        type={save ? 'button' : 'submit'}
+        type={save ? "button" : "submit"}
         onClick={save ?? null}
       />
     </Space>
@@ -50,7 +50,7 @@ ActionButtons.propTypes = {
 
 ActionButtons.defaultProps = {
   disabled: false,
-  saveLabel: 'Save'
+  saveLabel: "Save"
 }
 
 export default ActionButtons

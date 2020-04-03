@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box, Space } from '@kogaio'
-import MenuToggler from './MenuToggler'
+import React from "react"
+import PropTypes from "prop-types"
+import { Box, Space } from "@kogaio"
+import MenuToggler from "./MenuToggler"
 
 const Footer = ({ sidemenu, ...props }) => (
   <Box
@@ -10,7 +10,8 @@ const Footer = ({ sidemenu, ...props }) => (
     position='sticky'
     top='100%'
     width={1}
-    {...props}>
+    {...props}
+  >
     <Space mt={2} px={6} py={3}>
       <MenuToggler
         isExpanded={sidemenu.isExpanded}

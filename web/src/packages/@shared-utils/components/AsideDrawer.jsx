@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { Box, Space } from '@kogaio'
+import React from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
+import { Box, Space } from "@kogaio"
 
 const CONTENT_WIDTH = 280 + 6 * 4 * 2
 export const AsideDrawer = ({ children, ...props }) => (

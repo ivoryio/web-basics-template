@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import { Typography } from '@kogaio'
+import { Typography } from "@kogaio"
 
 const Caption = ({ children, ...props }) =>
   children ? (
@@ -10,7 +10,8 @@ const Caption = ({ children, ...props }) =>
       fontFamily='complementary'
       fontWeight='lighter'
       variant='h6'
-      {...props}>
+      {...props}
+    >
       {children}
     </Typography>
   ) : null

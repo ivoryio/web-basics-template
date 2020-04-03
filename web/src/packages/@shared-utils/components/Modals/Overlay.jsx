@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Modal, ActivityIndicator } from '@kogaio'
+import React from "react"
+import PropTypes from "prop-types"
+import { Modal, ActivityIndicator } from "@kogaio"
 
 const Overlay = ({
   backdropColor,
   children,
-  'data-testid': dataTestId,
+  "data-testid": dataTestId,
   id,
   visible,
   ...props
@@ -28,9 +28,10 @@ const Overlay = ({
       top={0}
       handleBackdropClick={() => false}
       visible={visible}
-      {...props}>
+      {...props}
+    >
       <ActivityIndicator
-        colors={{ background: 'transparent', primary: 'brand' }}
+        colors={{ background: "transparent", primary: "brand" }}
         position='absolute'
         top={0}
         variant='runningbar'
@@ -43,13 +44,13 @@ const Overlay = ({
 Overlay.propTypes = {
   backdropColor: PropTypes.string,
   children: PropTypes.node,
-  'data-testid': PropTypes.string,
+  "data-testid": PropTypes.string,
   id: PropTypes.string,
   visible: PropTypes.bool.isRequired
 }
 
 Overlay.defaultProps = {
-  backdropColor: 'modal-white70'
+  backdropColor: "modal-white70"
 }
 
 export default Overlay

@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Button, Card, Flex, Icon, Modal, Space, Typography } from '@kogaio'
+import React from "react"
+import PropTypes from "prop-types"
+import { Button, Card, Flex, Icon, Modal, Space, Typography } from "@kogaio"
 
 const ConfirmationModal = ({
   confirmMessage,
@@ -16,7 +16,8 @@ const ConfirmationModal = ({
         alignItems='center'
         display='flex'
         flexDirection='column'
-        variant='white'>
+        variant='white'
+      >
         <Typography color='black' role='title' variant='titleLight'>
           {title}
         </Typography>
@@ -52,8 +53,8 @@ ConfirmationModal.propTypes = {
 }
 
 ConfirmationModal.defaultProps = {
-  confirmMessage: 'Your request has been succesfully sent!',
-  title: 'Success!'
+  confirmMessage: "Your request has been succesfully sent!",
+  title: "Success!"
 }
 
 export default ConfirmationModal

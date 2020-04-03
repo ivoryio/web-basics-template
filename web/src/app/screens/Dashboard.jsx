@@ -15,7 +15,8 @@ const Dashboard = ({
     alignItems='center'
     flexDirection='column'
     justifyContent='center'
-    width={1}>
+    width={1}
+  >
     <Center>
       <Hello name={firstName} />
     </Center>

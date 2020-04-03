@@ -5,6 +5,10 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "styleguide": "npx styleguidist server --config src/styleguide/styleguide.config.js --open",
+    "build:styleguide": "rm -rf stylebuild && npx styleguidist build --config src/styleguide/styleguide.config.js",
+    "publish:styleguide": "npm run build:styleguide && aws s3 sync ./stylebuild s3://components.starterkit.com/ --profile switchboard",
+    "format": "prettier-eslint \"$PWD/src/**/*.{js,jsx}\" --write",
     "lint:js": "eslint 'src/**/*.{js,jsx}'",
     "lint:css": "stylelint 'src/**/*.{css,js,jsx}'",
     "lint": "npm run lint:js && npm run lint:css",
@@ -14,8 +18,11 @@
   "config-overrides-path": "src/config/config-overrides",
   "devDependencies": {
     "eslint-plugin-babel": "^5.3.0",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
     "react-app-rewired": "^2.1.5",
-    "stylelint": "^11.0.0",
+    "react-styleguidist": "^11.0.3",
+    "stylelint": "^13.2.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"

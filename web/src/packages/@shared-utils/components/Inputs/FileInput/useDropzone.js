@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react'
-import { useBoolean } from '../../../hooks/useBoolean'
+import { useEffect, useRef } from "react"
+import { useBoolean } from "../../../hooks/useBoolean"
 
 export const useDropzone = (selectFiles, dropzoneRef) => {
   const [dragging, setDragging] = useBoolean(false)
@@ -7,16 +7,16 @@ export const useDropzone = (selectFiles, dropzoneRef) => {
   const dragCounter = useRef(0)
   useEffect(() => {
     const dropzone = dropzoneRef.current
-    dropzone.addEventListener('dragenter', handleDragIn, false)
-    dropzone.addEventListener('dragleave', handleDragOut, false)
-    dropzone.addEventListener('dragover', preventDefaults, false)
-    dropzone.addEventListener('drop', handleDrop, false)
+    dropzone.addEventListener("dragenter", handleDragIn, false)
+    dropzone.addEventListener("dragleave", handleDragOut, false)
+    dropzone.addEventListener("dragover", preventDefaults, false)
+    dropzone.addEventListener("drop", handleDrop, false)
 
     return () => {
-      dropzone.removeEventListener('dragenter', handleDragIn, false)
-      dropzone.removeEventListener('dragleave', handleDragOut, false)
-      dropzone.removeEventListener('dragover', preventDefaults, false)
-      dropzone.removeEventListener('drop', handleDrop, false)
+      dropzone.removeEventListener("dragenter", handleDragIn, false)
+      dropzone.removeEventListener("dragleave", handleDragOut, false)
+      dropzone.removeEventListener("dragover", preventDefaults, false)
+      dropzone.removeEventListener("drop", handleDrop, false)
     }
 
     function preventDefaults (ev) {

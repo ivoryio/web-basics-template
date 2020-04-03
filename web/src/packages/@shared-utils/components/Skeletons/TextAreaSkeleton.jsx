@@ -1,6 +1,6 @@
-import React from 'react'
-import { Box, Space } from '@kogaio'
-import Skeleton from '../Skeleton'
+import React from "react"
+import { Box, Space } from "@kogaio"
+import Skeleton from "../Skeleton"
 
 export default () => (
   <Space mb={3}>

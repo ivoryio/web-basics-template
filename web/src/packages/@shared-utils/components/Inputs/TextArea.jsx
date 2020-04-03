@@ -1,16 +1,16 @@
-import React, { useCallback, useLayoutEffect, useMemo } from 'react'
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import React, { useCallback, useLayoutEffect, useMemo } from "react"
+import PropTypes from "prop-types"
+import styled, { css } from "styled-components"
 
-import { Sublabel } from '../Labels'
-import { Box, Flex, Space, Typography } from '@kogaio'
+import { Sublabel } from "../Labels"
+import { Box, Flex, Space, Typography } from "@kogaio"
 
-import { themed } from '@kogaio/utils'
-import { variant } from 'styled-system'
+import { themed } from "@kogaio/utils"
+import { variant } from "styled-system"
 
 const textareaStyle = variant({
-  scale: 'textareas',
-  prop: 'variant'
+  scale: "textareas",
+  prop: "variant"
 })
 
 const TextArea = ({
@@ -42,7 +42,7 @@ const TextArea = ({
     const oField = document.getElementById(id)
     if (oField.scrollHeight > oField.clientHeight) {
       oField.style.height = `${oField.scrollHeight}px`
-      oField.style.overflowY = 'hidden'
+      oField.style.overflowY = "hidden"
     }
   }, [id])
 
@@ -51,9 +51,9 @@ const TextArea = ({
   }, [autoGrow, autoGrowTextArea])
 
   const textareaVariant = useMemo(() => {
-    if (disabled) return 'disabled'
-    else if (error) return 'error'
-    else if (valid) return 'valid'
+    if (disabled) return "disabled"
+    else if (error) return "error"
+    else if (valid) return "valid"
     return variant
   }, [disabled, error, valid, variant])
 
@@ -70,8 +70,9 @@ const TextArea = ({
           className='textarea-label'
           display='block'
           htmlFor={id}
-          variant='inputLabel'>
-          {label} {required ? '*' : ''}
+          variant='inputLabel'
+        >
+          {label} {required ? "*" : ""}
         </Typography>
       ) : null}
       <Space p={3}>
@@ -92,15 +93,17 @@ const TextArea = ({
           rows={rows}
           variant={textareaVariant}
           wrap={wrap}
-          {...props}>
+          {...props}
+        >
           {children}
         </TextAreaComponent>
       </Space>
-      {[error, valid].some(item => typeof item === 'string') ? (
+      {[error, valid].some(item => typeof item === "string") ? (
         <Space my={1}>
           <Sublabel
             className='textarea-sublabel'
-            type={error ? 'error' : 'valid'}>
+            type={error ? "error" : "valid"}
+          >
             {error ?? valid}
           </Sublabel>
         </Space>
@@ -124,7 +127,7 @@ const readOnlyStyle = css`
   }
 `
 const Container = styled(Flex)`
-  ${themed('TextArea.container')};
+  ${themed("TextArea.container")};
 `
 
 const TextAreaComponent = styled(Box)`
@@ -132,13 +135,13 @@ const TextAreaComponent = styled(Box)`
     outline: none;
   }
 
-  ${themed('TextArea')};
+  ${themed("TextArea")};
   ${textareaStyle};
   ${({ readOnly }) => (readOnly ? readOnlyStyle : null)};
 `
 
 const Dummy = styled.div`
-  display: ${({ hide }) => (hide ? 'none' : 'block')};
+  display: ${({ hide }) => (hide ? "none" : "block")};
   height: 20px;
   opacity: 0;
   visibility: hidden;
@@ -166,12 +169,12 @@ TextArea.propTypes = {
   required: PropTypes.bool,
   valid: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   variant: PropTypes.string,
-  wrap: PropTypes.oneOf(['hard', 'soft'])
+  wrap: PropTypes.oneOf(["hard", "soft"])
 }
 
 TextArea.defaultProps = {
-  variant: 'default',
-  onChange: () => console.warn('* TextArea expects an onChange function')
+  variant: "default",
+  onChange: () => console.warn("* TextArea expects an onChange function")
 }
 
 export default TextArea

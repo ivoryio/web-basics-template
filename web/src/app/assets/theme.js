@@ -120,9 +120,7 @@ const CARD_VARIANTS = {
   dotted: {
     border: `1px dotted ${COLORS.brand50}`,
     "border-radius": `${radii[2]}px`,
-    "box-shadow": `0px 3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${
-      COLORS.black15
-    }`
+    "box-shadow": `0px 3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${COLORS.black15}`
   },
   "template-doc": {
     background: COLORS["template-card-bg"],
@@ -199,9 +197,7 @@ const DROPDOWN_VARIANTS = {
       }
     },
     "&.dropdown-active": {
-      "border-radius": `${radii[4]}px ${radii[4]}px ${radii.none}px ${
-        radii.none
-      }px`,
+      "border-radius": `${radii[4]}px ${radii[4]}px ${radii.none}px ${radii.none}px`,
       border: `${borders[1]} ${COLORS["brand-secondary"]}`
     }
   }
@@ -271,14 +267,10 @@ const GRID_CONTAINER = {
     ":nth-of-type(3)": {
       "margin-top": `${space[6]}px`,
       "border-bottom": "none",
-      "border-radius": `${radii[4]}px ${radii[4]}px ${radii.none}px ${
-        radii.none
-      }px`
+      "border-radius": `${radii[4]}px ${radii[4]}px ${radii.none}px ${radii.none}px`
     },
     ":last-of-type": {
-      "border-radius": `${radii.none}px ${radii.none}px ${radii[4]}px ${
-        radii[4]
-      }px`
+      "border-radius": `${radii.none}px ${radii.none}px ${radii[4]}px ${radii[4]}px`
     },
     ":nth-of-type(n + 4):not(:last-of-type)": {
       "border-bottom": "none"
@@ -443,12 +435,8 @@ const theme = {
   },
   shadows: {
     "card-simple": `0px 1px 4px ${COLORS.black25}`,
-    "card-highlight": `0px 3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${
-      COLORS.black15
-    }`,
-    "text-editor": `0px -3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${
-      COLORS.black15
-    }`
+    "card-highlight": `0px 3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${COLORS.black15}`,
+    "text-editor": `0px -3px 6px ${COLORS["shadow-gray"]}, 0px 0px 2px ${COLORS.black15}`
   },
   textStyles: {
     underline: {

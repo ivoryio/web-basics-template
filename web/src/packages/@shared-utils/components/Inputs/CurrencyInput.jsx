@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
-import { Flex, Input } from '@kogaio'
+import React, { useRef } from "react"
+import PropTypes from "prop-types"
+import { Flex, Input } from "@kogaio"
 
 const CurrencyInput = ({ max, min, onChange, step, value, ...props }) => {
   const signs = useRef({
@@ -70,7 +70,7 @@ CurrencyInput.propTypes = {
 CurrencyInput.defaultProps = {
   max: Number.MAX_SAFE_INTEGER,
   min: 0,
-  placeholder: 'Add amount',
+  placeholder: "Add amount",
   step: 1
 }
 

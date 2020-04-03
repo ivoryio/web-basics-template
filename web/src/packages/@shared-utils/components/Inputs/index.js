@@ -1,5 +1,5 @@
-export { default as CurrencyInput } from './CurrencyInput'
-export { default as DebounceInput } from './DebounceInput'
-export { FileInput } from './FileInput'
-export { default as TagInput } from './TagInput'
-export { default as TextArea } from './TextArea'
+export { default as CurrencyInput } from "./CurrencyInput"
+export { default as DebounceInput } from "./DebounceInput"
+export { FileInput } from "./FileInput"
+export { default as TagInput } from "./TagInput"
+export { default as TextArea } from "./TextArea"

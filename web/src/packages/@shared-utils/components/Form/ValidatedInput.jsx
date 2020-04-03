@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Input from '@kogaio/Input'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import Input from "@kogaio/Input"
+import { useField } from "formik"
 
-import { InputSkeleton } from '../Skeletons'
-import { withFieldValidation } from './withFieldValidation'
+import { InputSkeleton } from "../Skeletons"
+import { withFieldValidation } from "./withFieldValidation"
 
 const ValidatedInput = ({ isInitializing, CustomLoading, ...props }) => {
   const [field, { error, touched, ...meta }] = useField(props)
@@ -47,7 +47,7 @@ ValidatedInput.propTypes = {
 }
 
 ValidatedInput.defaultProps = {
-  type: 'text'
+  type: "text"
 }
 
 export default withFieldValidation(ValidatedInput)

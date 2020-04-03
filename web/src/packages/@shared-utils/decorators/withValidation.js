@@ -17,10 +17,8 @@ export const withValidation = Component => props => {
     if (touched[name] && !errors[name]) return capitalizeFirstChar(validMessage)
   }
   return (
-    <Field
-      name={name}
-      validate={_validateField}
-      >{({ field, form: { touched, errors }, ...rest }) => {
+    <Field name={name} validate={_validateField}>
+      {({ field, form: { touched, errors }, ...rest }) => {
         const fieldProps = {
           ...field,
           ...rest,
@@ -29,7 +27,7 @@ export const withValidation = Component => props => {
           name,
           valid: showValidFeedback(touched, errors)
         }
-        
+
         return <Component {...fieldProps} />
       }}
     </Field>

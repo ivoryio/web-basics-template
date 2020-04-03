@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from '@reach/router'
-import styled from 'styled-components'
-import { Flex, Icon, Space, Typography } from '@kogaio'
-import { themed, themeGet } from '@kogaio/utils'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "@reach/router"
+import styled from "styled-components"
+import { Flex, Icon, Space, Typography } from "@kogaio"
+import { themed, themeGet } from "@kogaio/utils"
 
 const MenuItem = ({ item, isMenuExpanded, ...props }) => {
   const _handleLinkProps = ({ isPartiallyCurrent }) => {
-    if (isPartiallyCurrent) return { id: 'active-route' }
+    if (isPartiallyCurrent) return { id: "active-route" }
   }
 
   return (
@@ -17,7 +17,8 @@ const MenuItem = ({ item, isMenuExpanded, ...props }) => {
       getProps={_handleLinkProps}
       state={{ title: item.title }}
       title={item.title}
-      to={item.route}>
+      to={item.route}
+    >
       <Flex alignItems='center' {...props}>
         <Icon
           className='section-item-content item-icon'
@@ -30,9 +31,10 @@ const MenuItem = ({ item, isMenuExpanded, ...props }) => {
             as='span'
             className='section-item-content item-label'
             color='sidemenu-item'
-            display={isMenuExpanded ? 'block' : 'hidden'}
+            display={isMenuExpanded ? "block" : "hidden"}
             opacity={isMenuExpanded ? 1 : 0}
-            variant='h6'>
+            variant='h6'
+          >
             {item.title}
           </Typography>
         </Space>
@@ -43,20 +45,20 @@ const MenuItem = ({ item, isMenuExpanded, ...props }) => {
 
 const MenuLink = styled(Link)`
   &#active-route .item-label:after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 8px;
     height: 8px;
-    background-color: ${themeGet('colors.active')};
-    border-radius: ${themeGet('radii.round')};
-    margin-left: ${themeGet('space.2')}px;
+    background-color: ${themeGet("colors.active")};
+    border-radius: ${themeGet("radii.round")};
+    margin-left: ${themeGet("space.2")}px;
   }
 
   .item-label {
     transition: opacity 330ms ease-in-out;
   }
 
-  ${themed('MenuItem')};
+  ${themed("MenuItem")};
 `
 
 MenuItem.propTypes = {

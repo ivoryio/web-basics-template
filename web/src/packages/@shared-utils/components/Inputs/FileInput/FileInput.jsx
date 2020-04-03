@@ -1,13 +1,13 @@
-import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
-import { Box, Button, Flex, Space, Typography } from '@kogaio'
-import styled from 'styled-components'
+import React, { useRef } from "react"
+import PropTypes from "prop-types"
+import { Box, Button, Flex, Space, Typography } from "@kogaio"
+import styled from "styled-components"
 
-import Dropzone from './Dropzone'
-import { Sublabel } from '../../Labels'
-import SelectedFileTag from './SelectedFileTag'
+import Dropzone from "./Dropzone"
+import { Sublabel } from "../../Labels"
+import SelectedFileTag from "./SelectedFileTag"
 
-import { useDropzone } from './useDropzone'
+import { useDropzone } from "./useDropzone"
 
 const FileInput = ({
   accept,
@@ -69,8 +69,9 @@ const FileInput = ({
           className='fileinput-label'
           display='block'
           htmlFor={id}
-          variant='inputLabel'>
-          {label} {required ? '*' : null}
+          variant='inputLabel'
+        >
+          {label} {required ? "*" : null}
         </Typography>
       ) : null}
       {value == null ||
@@ -89,8 +90,8 @@ const FileInput = ({
           />
           <Button
             as='label'
-            bg={error ? 'error03' : 'transparent'}
-            borderColor={error ? 'error' : 'brand'}
+            bg={error ? "error03" : "transparent"}
+            borderColor={error ? "error" : "brand"}
             htmlFor={id}
             title={buttonLabel}
             variant='outline'
@@ -112,12 +113,13 @@ const FileInput = ({
           {sublabel ? <Sublabel color='info'>{sublabel}</Sublabel> : null}
         </Space>
       )}
-      {typeof error === 'string' && error.length > 0 ? (
+      {typeof error === "string" && error.length > 0 ? (
         <Space my={1}>
           <Sublabel
             align='flex-start'
             className='textarea-sublabel'
-            type={error ? 'error' : 'valid'}>
+            type={error ? "error" : "valid"}
+          >
             {error}
           </Sublabel>
         </Space>
@@ -129,7 +131,7 @@ const FileInput = ({
 }
 
 const Input = styled.input`
-  &[type='file'] {
+  &[type="file"] {
     cursor: pointer;
     height: 100%;
     left: 0;
@@ -141,7 +143,7 @@ const Input = styled.input`
 `
 
 const Dummy = styled.div`
-  display: ${({ hide }) => (hide ? 'none' : 'block')};
+  display: ${({ hide }) => (hide ? "none" : "block")};
   height: 20px;
   opacity: 0;
   visibility: hidden;
@@ -170,9 +172,9 @@ FileInput.propTypes = {
 }
 
 FileInput.defaultProps = {
-  buttonLabel: 'UPLOAD',
+  buttonLabel: "UPLOAD",
   multiple: false,
-  onChange: () => console.warn('* FileInput expects an onChange function')
+  onChange: () => console.warn("* FileInput expects an onChange function")
 }
 
 export default FileInput

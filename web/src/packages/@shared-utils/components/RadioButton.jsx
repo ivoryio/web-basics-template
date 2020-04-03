@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import styled, { css } from "styled-components"
 
-import { Flex, Space, Typography } from '@kogaio'
-import { themeGet } from '@kogaio/utils'
+import { Flex, Space, Typography } from "@kogaio"
+import { themeGet } from "@kogaio/utils"
 
 const RadioButton = ({
   bulletSize,
@@ -29,7 +29,8 @@ const RadioButton = ({
         checked={checked}
         error={error}
         htmlFor={id}
-        bulletSize={bulletSize}>
+        bulletSize={bulletSize}
+      >
         {label}
       </RadioLabel>
     </Space>
@@ -50,11 +51,11 @@ const _labelStyle = ({ checked }) =>
 const _borderStyle = ({ checked, error }) =>
   checked
     ? css`
-        border: ${themeGet('borders.2')} ${themeGet('colors.brand')};
+        border: ${themeGet("borders.2")} ${themeGet("colors.brand")};
       `
     : css`
-        border: ${themeGet('borders.2')}
-          ${themeGet(`colors.${error ? 'error' : 'brand25'}`)};
+        border: ${themeGet("borders.2")}
+          ${themeGet(`colors.${error ? "error" : "brand25"}`)};
       `
 
 const Input = styled.input`
@@ -76,9 +77,9 @@ const RadioLabel = styled(Typography)`
   width: auto;
 
   ::before {
-    background-color: ${themeGet('colors.white')};
-    border-radius: ${themeGet('radii.round')};
-    content: '';
+    background-color: ${themeGet("colors.white")};
+    border-radius: ${themeGet("radii.round")};
+    content: "";
     height: ${({ bulletSize }) => bulletSize - 4}px;
     left: 0;
     position: absolute;
@@ -88,9 +89,9 @@ const RadioLabel = styled(Typography)`
   }
 
   ::after {
-    background-color: ${themeGet('colors.brand')};
-    border-radius: ${themeGet('radii.round')};
-    content: '';
+    background-color: ${themeGet("colors.brand")};
+    border-radius: ${themeGet("radii.round")};
+    content: "";
     height: ${({ bulletSize }) => bulletSize / 2}px;
     left: ${({ bulletSize }) => bulletSize / 4}px;
     position: absolute;

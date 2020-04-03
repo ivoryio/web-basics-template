@@ -4,11 +4,11 @@ import {
   useLayoutEffect,
   useMemo,
   useState
-} from 'react'
+} from "react"
 
 const SIDEMENU = {
-  expanded: '216px',
-  collapsed: '64px'
+  expanded: "216px",
+  collapsed: "64px"
 }
 
 export const useSideMenu = ({ initialExpanded = true }) => {
@@ -45,11 +45,11 @@ export const useSideMenu = ({ initialExpanded = true }) => {
   ])
 
   useEffect(() => {
-    window.addEventListener('collapseSidemenu', collapse)
-    window.addEventListener('expandSidemenu', expand)
+    window.addEventListener("collapseSidemenu", collapse)
+    window.addEventListener("expandSidemenu", expand)
     return () => {
-      window.removeEventListener('collapseSidemenu', collapse)
-      window.removeEventListener('expandSidemenu', expand)
+      window.removeEventListener("collapseSidemenu", collapse)
+      window.removeEventListener("expandSidemenu", expand)
     }
   }, [collapse, expand])
 

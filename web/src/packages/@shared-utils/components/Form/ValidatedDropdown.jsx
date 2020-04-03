@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Dropdown from '@kogaio/Dropdown'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import Dropdown from "@kogaio/Dropdown"
+import { useField } from "formik"
 
-import { InputSkeleton } from '../Skeletons'
-import { withFieldValidation } from './withFieldValidation'
+import { InputSkeleton } from "../Skeletons"
+import { withFieldValidation } from "./withFieldValidation"
 
 const ValidatedDropdown = ({ CustomLoading, isInitializing, ...props }) => {
   const [
@@ -46,7 +46,7 @@ const ValidatedDropdown = ({ CustomLoading, isInitializing, ...props }) => {
 
 ValidatedDropdown.propTypes = {
   autoComplete: PropTypes.string,
-  'data-testid': PropTypes.string,
+  "data-testid": PropTypes.string,
   children: PropTypes.node,
   CustomLoading: PropTypes.node,
   id: PropTypes.string,

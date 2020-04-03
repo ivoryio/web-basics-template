@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from "react"
 
-import { _checkObjEqual } from '../funcs'
+import { _checkObjEqual } from "../funcs"
 
-const INITIAL_STATE = process.env.REACT_APP_NODE_ENV === 'development' || false
+const INITIAL_STATE = process.env.REACT_APP_NODE_ENV === "development" || false
 
 export const useFeatureFlags = initialState => {
   const [flags, setFlags] = useState({
@@ -38,14 +38,14 @@ export const useFeatureFlags = initialState => {
   )
 
   useEffect(() => {
-    window.addEventListener('storage', watchStorage)
+    window.addEventListener("storage", watchStorage)
     return () => {
-      window.removeEventListener('storage', watchStorage)
+      window.removeEventListener("storage", watchStorage)
     }
 
     function watchStorage (ev) {
       if (ev.key) {
-        const flagValues = ['true', 'false']
+        const flagValues = ["true", "false"]
         updateFlag({
           [ev.key]:
             ev.newValue &&

@@ -32,20 +32,23 @@ const SignUp = ({
       alignItems='center'
       id='container-signup'
       justifyContent='center'
-      {...props}>
+      {...props}
+    >
       <Space mx={4} p={8} pt={{ xs: 24, lg: 8 }}>
         <Card
           alignItems='center'
           variant='light'
           display='flex'
           flexDirection='column'
-          width={{ xs: 1, sm: 3 / 4, md: 3 / 5, lg: 1 / 2 }}>
+          width={{ xs: 1, sm: 3 / 4, md: 3 / 5, lg: 1 / 2 }}
+        >
           <Image mx='auto' size={120} src={icons.logo} />
           <Typography
             color='dark-gunmetal'
             fontWeight='bold'
             textAlign='center'
-            variant='h2'>
+            variant='h2'
+          >
             Sign Up Below!
           </Typography>
           <Formik
@@ -56,7 +59,8 @@ const SignUp = ({
               familyName: ""
             }}
             onSubmit={requestSignUp}
-            >{({
+          >
+            {({
               handleSubmit,
               isSubmitting,
               status,
@@ -127,7 +131,8 @@ const SignUp = ({
                         <Typography
                           color='error'
                           textAlign='center'
-                          variant='h6'>
+                          variant='h6'
+                        >
                           {status}
                         </Typography>
                       </Box>

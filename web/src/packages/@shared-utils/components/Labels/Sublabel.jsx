@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import { Flex, Icon, Space, Typography } from '@kogaio'
+import { Flex, Icon, Space, Typography } from "@kogaio"
 
 const Sublabel = ({
   align,
@@ -17,7 +17,8 @@ const Sublabel = ({
     justifyContent={align}
     height='12px'
     width={1}
-    {...passedProps}>
+    {...passedProps}
+  >
     {icon ? (
       <Space pr={1}>
         <Icon color={color} fontSize={0} name={icon} />
@@ -30,7 +31,7 @@ const Sublabel = ({
 )
 
 Sublabel.propTypes = {
-  align: PropTypes.oneOf(['flex-start', 'flex-end']),
+  align: PropTypes.oneOf(["flex-start", "flex-end"]),
   className: PropTypes.string,
   color: PropTypes.string,
   children: PropTypes.string.isRequired,
@@ -38,10 +39,10 @@ Sublabel.propTypes = {
 }
 
 Sublabel.defaultProps = {
-  align: 'flex-end',
-  color: 'error',
-  icon: 'error_outline'
+  align: "flex-end",
+  color: "error",
+  icon: "error_outline"
 }
-Sublabel.displayName = 'Sublabel'
+Sublabel.displayName = "Sublabel"
 
 export default Sublabel

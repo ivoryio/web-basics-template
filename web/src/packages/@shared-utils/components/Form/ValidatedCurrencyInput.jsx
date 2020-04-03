@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import { useField } from "formik"
 
-import { InputSkeleton } from '../Skeletons'
-import CurrencyInput from '../Inputs/CurrencyInput'
-import { withFieldValidation } from './withFieldValidation'
-import { positiveValue } from '@shared-utils/funcs'
+import { InputSkeleton } from "../Skeletons"
+import CurrencyInput from "../Inputs/CurrencyInput"
+import { withFieldValidation } from "./withFieldValidation"
+import { positiveValue } from "@shared-utils/funcs"
 
 const ValidatedCurrencyInput = ({
   isInitializing,
@@ -37,7 +37,7 @@ ValidatedCurrencyInput.propTypes = {
 }
 
 ValidatedCurrencyInput.defaultProps = {
-  type: 'number'
+  type: "number"
 }
 
 export default withFieldValidation(ValidatedCurrencyInput, [positiveValue])

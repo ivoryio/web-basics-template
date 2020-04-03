@@ -5,34 +5,34 @@ export const urlRegex = /(https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!
 
 export const required = value => {
   switch (typeof value) {
-    case 'string':
-      return !value || !value.trim().length ? 'Required' : ''
-    case 'object':
-      if (value instanceof File) return ''
-      return value == null || !Object.keys(value).length ? 'Required' : ''
+    case "string":
+      return !value || !value.trim().length ? "Required" : ""
+    case "object":
+      if (value instanceof File) return ""
+      return value == null || !Object.keys(value).length ? "Required" : ""
     default:
       break
   }
 }
 
 export const requiredBool = value =>
-  !value || !value.trim().length ? true : ''
+  !value || !value.trim().length ? true : ""
 
 export const emailFormat = value =>
-  emailRegex.test(value) ? '' : 'Invalid email address format'
+  emailRegex.test(value) ? "" : "Invalid email address format"
 
 export const passwordFormat = value =>
-  passwordRegex.test(value) ? '' : 'Invalid password format'
+  passwordRegex.test(value) ? "" : "Invalid password format"
 
 export const passwordLength = value =>
   value.trim().length < 6
-    ? 'Password must contain a minimum of 6 characters'
-    : ''
+    ? "Password must contain a minimum of 6 characters"
+    : ""
 export const verificationCodeFormat = value =>
-  /\b\d{6}\b/.test(value) ? '' : 'Invalid verification code format'
+  /\b\d{6}\b/.test(value) ? "" : "Invalid verification code format"
 
 export const urlFormat = value =>
-  urlRegex.test(value) ? '' : 'Invalid URL format'
+  urlRegex.test(value) ? "" : "Invalid URL format"
 
 export const positiveValue = value =>
-  value > 0 ? '' : 'Value must be positive number'
+  value > 0 ? "" : "Value must be positive number"

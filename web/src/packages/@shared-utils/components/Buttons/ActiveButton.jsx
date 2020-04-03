@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Icon, Flex, Space, Touchable, Typography } from '@kogaio'
+import React from "react"
+import PropTypes from "prop-types"
+import { Icon, Flex, Space, Touchable, Typography } from "@kogaio"
 
-import RoundedIcon from '../RoundedIcon'
+import RoundedIcon from "../RoundedIcon"
 
 const ActiveButton = ({
   flexDirection,
@@ -19,21 +19,24 @@ const ActiveButton = ({
     effect='opacity'
     onClick={onClick}
     title={label}
-    type={onClick ? 'button' : 'submit'}>
+    type={onClick ? "button" : "submit"}
+  >
     <Flex alignItems='center' flexDirection={flexDirection} {...props}>
       {icRounded ? (
         <RoundedIcon disabled={disabled} fontSize={0} name={icon} />
       ) : (
-        <Icon color={disabled ? 'brand25' : 'brand'} fontSize={2} name={icon} />
+        <Icon color={disabled ? "brand25" : "brand"} fontSize={2} name={icon} />
       )}
       <Space
-        pl={flexDirection === 'row' ? 1 : 0}
-        pr={flexDirection === 'row-reverse' ? 1 : 0}>
+        pl={flexDirection === "row" ? 1 : 0}
+        pr={flexDirection === "row-reverse" ? 1 : 0}
+      >
         <Typography
-          color={disabled ? 'brand25' : 'brand'}
+          color={disabled ? "brand25" : "brand"}
           fontSize={0}
           fontWeight='bold'
-          textStyle='caps'>
+          textStyle='caps'
+        >
           {label}
         </Typography>
       </Space>
@@ -52,7 +55,7 @@ ActiveButton.propTypes = {
 
 ActiveButton.defaultProps = {
   disabled: false,
-  flexDirection: 'row',
+  flexDirection: "row",
   icRounded: false
 }
 

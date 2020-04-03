@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import { Flex, Space, Touchable, Typography } from '@kogaio'
+import { Flex, Space, Touchable, Typography } from "@kogaio"
 
-import { ActiveButton } from '.'
+import { ActiveButton } from "."
 
 const PromptButtons = ({
   disabled,
@@ -15,7 +15,7 @@ const PromptButtons = ({
   ...props
 }) => (
   <Flex justifyContent='space-between' {...props}>
-    <Typography variant='titleLight'>{title || ''}&nbsp;</Typography>
+    <Typography variant='titleLight'>{title || ""}&nbsp;</Typography>
     {readOnly ? (
       <ActiveButton
         data-testid='edit-toggle-btn'
@@ -32,7 +32,8 @@ const PromptButtons = ({
             disabled={disabled}
             effect='opacity'
             onClick={onCancel}
-            title='Cancel'>
+            title='Cancel'
+          >
             <Typography fontSize={0} textStyle='underline'>
               Cancel
             </Typography>

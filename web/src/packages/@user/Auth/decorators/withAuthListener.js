@@ -22,7 +22,9 @@ export const withAuthListener = Component => props => {
   }, [fetchUser])
 
   if (currentUser === undefined) return null
-  return <Component currentUser={currentUser} authed={!!currentUser} {...props} />
+  return (
+    <Component currentUser={currentUser} authed={!!currentUser} {...props} />
+  )
 }
 
 function useAuth () {

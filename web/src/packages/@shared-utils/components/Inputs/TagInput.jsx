@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
-import { Box, Chip, Flex, Input, Space, Typography } from '@kogaio'
-import { themed, themeGet } from '@kogaio/utils'
+import { Box, Chip, Flex, Input, Space, Typography } from "@kogaio"
+import { themed, themeGet } from "@kogaio/utils"
 
 const TagInput = ({
   containerStyle,
@@ -18,7 +18,7 @@ const TagInput = ({
   onChange: storeTags,
   ...props
 }) => {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState("")
 
   const _removeTag = i => {
     const newTags = [...tags]
@@ -29,10 +29,10 @@ const TagInput = ({
   const _handleKeyDown = ev => {
     const val = ev.target.value.trim().toUpperCase()
 
-    if (ev.key === 'Enter') {
+    if (ev.key === "Enter") {
       ev.preventDefault()
       _storeValue(val)
-    } else if (ev.key === 'Backspace' && !val) _removeTag(tags.length - 1)
+    } else if (ev.key === "Backspace" && !val) _removeTag(tags.length - 1)
   }
 
   const _handleBlur = ev => {
@@ -46,7 +46,7 @@ const TagInput = ({
     if (tagExists) return
 
     storeTags([...tags, val])
-    setInputValue('')
+    setInputValue("")
   }
 
   const _handleInputValue = ev => setInputValue(ev?.target?.value)
@@ -64,8 +64,9 @@ const TagInput = ({
           display='block'
           htmlFor={id}
           className='taginput-label'
-          variant='inputLabel'>
-          {label} {required ? '*' : ''}
+          variant='inputLabel'
+        >
+          {label} {required ? "*" : ""}
         </Typography>
       ) : null}
       <TagList as='ul' onClick={_focusInput} readOnly={readOnly}>
@@ -90,7 +91,7 @@ const TagInput = ({
         <Space ml={tags.length > 0 ? 1 : 0}>
           <InputWrapper readOnly={readOnly}>
             <Input
-              bg={readOnly ? 'transparent' : 'input-bg'}
+              bg={readOnly ? "transparent" : "input-bg"}
               disabled={readOnly}
               minHeight='36px'
               id={id}
@@ -99,7 +100,7 @@ const TagInput = ({
               onBlur={_handleBlur}
               onChange={_handleInputValue}
               onKeyDown={_handleKeyDown}
-              placeholder={readOnly ? '' : 'Add a new tag'}
+              placeholder={readOnly ? "" : "Add a new tag"}
               value={inputValue}
               variant='tagInput'
               width={1}
@@ -117,7 +118,7 @@ const readOnlyStyle = css`
   &:hover,
   &:focus-within {
     background-color: transparent;
-    border: ${themeGet('borders.1')} transparent;
+    border: ${themeGet("borders.1")} transparent;
   }
 `
 const TagList = styled(Flex)`
@@ -125,21 +126,21 @@ const TagList = styled(Flex)`
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-left: ${({ readOnly }) => (readOnly ? 0 : themeGet('space.1'))}px;
+  padding-left: ${({ readOnly }) => (readOnly ? 0 : themeGet("space.1"))}px;
   width: 100%;
-  ${themed('TagInput')};
+  ${themed("TagInput")};
 
   .tag-chip {
     user-select: none;
     list-style: none;
-    ${themed('TagInput.tag')};
+    ${themed("TagInput.tag")};
   }
   ${({ readOnly }) => (readOnly ? readOnlyStyle : null)};
 `
 
 const InputWrapper = styled(Box)`
   background-color: transparent;
-  display: ${({ readOnly }) => (readOnly ? 'none' : 'block')};
+  display: ${({ readOnly }) => (readOnly ? "none" : "block")};
   flex-grow: 1;
   padding: 0;
   height: 100%;
@@ -158,7 +159,7 @@ TagInput.propTypes = {
 }
 
 TagInput.defaultProps = {
-  tagColor: 'brand',
+  tagColor: "brand",
   readOnly: false
 }
 

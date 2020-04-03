@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useField } from 'formik'
+import React from "react"
+import PropTypes from "prop-types"
+import { useField } from "formik"
 
-import RadioButton from '../RadioButton'
-import { withFieldValidation } from './withFieldValidation'
+import RadioButton from "../RadioButton"
+import { withFieldValidation } from "./withFieldValidation"
 
 const ValidatedRadioButton = props => {
   const [
@@ -15,7 +15,7 @@ const ValidatedRadioButton = props => {
   const _handleChange = async ev => {
     const { setError, setTouched, setValue } = helpers
     setTouched(true)
-    setError('')
+    setError("")
     await setValue(ev.target.value)
   }
 
@@ -42,7 +42,7 @@ ValidatedRadioButton.propTypes = {
 }
 
 ValidatedRadioButton.defaultProps = {
-  type: 'radio'
+  type: "radio"
 }
 
 export default withFieldValidation(ValidatedRadioButton)

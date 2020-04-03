@@ -1,7 +1,7 @@
-import React, { Children, cloneElement, useMemo } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { themed } from '@kogaio/utils'
+import React, { Children, cloneElement, useMemo } from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { themed } from "@kogaio/utils"
 
 const TabPanel = ({
   name,
@@ -23,7 +23,8 @@ const TabPanel = ({
       role='tabpanel'
       aria-labelledby={`tab-${namespace}-${name}`}
       style={visible ? styles.visible : styles.hidden}
-      {...passedProps}>
+      {...passedProps}
+    >
       {canRenderChildren
         ? Children.toArray(children).map(child =>
             cloneElement(child, {
@@ -37,7 +38,7 @@ const TabPanel = ({
 
 export const styles = {
   hidden: {
-    display: 'none'
+    display: "none"
   },
   visible: {}
 }
@@ -46,7 +47,7 @@ const Panel = styled.div`
   flex: 0 999 auto;
   min-width: 100%;
 
-  ${themed('Tabs.Panel')};
+  ${themed("Tabs.Panel")};
 `
 
 TabPanel.propTypes = {
@@ -58,5 +59,5 @@ TabPanel.propTypes = {
   visible: PropTypes.bool
 }
 
-TabPanel.displayName = 'TabPanel'
+TabPanel.displayName = "TabPanel"
 export default TabPanel

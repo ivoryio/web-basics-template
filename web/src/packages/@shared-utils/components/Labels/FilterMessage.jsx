@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Space, Typography } from '@kogaio'
+import React from "react"
+import PropTypes from "prop-types"
+import { Space, Typography } from "@kogaio"
 
 const FilterMessage = ({ filterName, filterSuffix }) => (
   <Space mx='auto' mt={6}>
@@ -22,7 +22,7 @@ FilterMessage.propTypes = {
 }
 
 FilterMessage.defaultProps = {
-  filterSuffix: 'category'
+  filterSuffix: "category"
 }
 
 export default FilterMessage

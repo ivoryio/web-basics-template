@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { Input } from '@kogaio'
+import React, { useState } from "react"
+import PropTypes from "prop-types"
+import { Input } from "@kogaio"
 
-import { useDebounce } from '../../hooks/useDebounce'
-import { usePrevious } from '../../hooks/usePrevious'
+import { useDebounce } from "../../hooks/useDebounce"
+import { usePrevious } from "../../hooks/usePrevious"
 
 export const DebounceInput = ({
   icLeft,
@@ -15,7 +15,7 @@ export const DebounceInput = ({
   placeholder,
   ...props
 }) => {
-  const [term, updateTerm] = useState('')
+  const [term, updateTerm] = useState("")
   const _handleTermChange = ev => updateTerm(ev.target.value)
 
   const prevTerm = usePrevious(term.trim())
@@ -26,7 +26,7 @@ export const DebounceInput = ({
         if (searchTerm.length >= minLength) {
           await handleDebounceCall(term)
         } else {
-          await handleDebounceCall('')
+          await handleDebounceCall("")
         }
       }
     },
@@ -71,7 +71,7 @@ DebounceInput.propTypes = {
 DebounceInput.defaultProps = {
   debounceTimeout: 300,
   minLength: 1,
-  onChange: () => console.error('* DebounceInput expects an onChange function')
+  onChange: () => console.error("* DebounceInput expects an onChange function")
 }
 
 export default DebounceInput

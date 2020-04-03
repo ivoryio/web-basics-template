@@ -1,13 +1,13 @@
-import React, { Children, cloneElement, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { themed } from '@kogaio/utils'
-import { Flex } from '@kogaio/Responsive'
+import React, { Children, cloneElement, useEffect, useState } from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { themed } from "@kogaio/utils"
+import { Flex } from "@kogaio/Responsive"
 
-import { usePrevious } from '../../hooks/usePrevious'
+import { usePrevious } from "../../hooks/usePrevious"
 
-import TabLink from './TabLink'
-import TabPanel from './TabPanel'
+import TabLink from "./TabLink"
+import TabPanel from "./TabPanel"
 
 const findDefaultTab = children => {
   let firstLink
@@ -16,7 +16,7 @@ const findDefaultTab = children => {
   const traverse = child => {
     if (!child || !child.props || firstDefaultLink) return
 
-    if (child.type.displayName === 'TabLink') {
+    if (child.type.displayName === "TabLink") {
       firstLink = firstLink ?? child.props.to
       firstDefaultLink =
         firstDefaultLink ?? (child.props.default && child.props.to)
@@ -48,7 +48,7 @@ const Tabs = ({
   const prevSelected = usePrevious(selectedTab)
 
   useEffect(() => {
-    if (typeof onChange === 'function') {
+    if (typeof onChange === "function") {
       onChange(currentTab, tabNamespace)
       if (currentTab !== prevTab) onChange(currentTab, tabNamespace)
       if (selectedTab !== prevSelected) setCurrentTab(selectedTab)
@@ -64,12 +64,12 @@ const Tabs = ({
     children,
     { handleSelect, selectedTab, name, tabComponent }
   ) => {
-    if (typeof children !== 'object') return children
+    if (typeof children !== "object") return children
 
     return Children.map(children, child => {
       if (!child) return child
 
-      if (child.type.displayName === 'TabLink') {
+      if (child.type.displayName === "TabLink") {
         return cloneElement(child, {
           isActive: child.props.to === selectedTab,
           component: child.props.component || tabComponent,
@@ -78,7 +78,7 @@ const Tabs = ({
         })
       }
 
-      if (child.type.displayName === 'TabPanel') {
+      if (child.type.displayName === "TabPanel") {
         return cloneElement(child, {
           namespace: name,
           renderActiveTabContentOnly,
@@ -115,7 +115,7 @@ const Tabs = ({
 const TabLinkWrapper = styled(Flex)`
   align-content: flex-start;
   flex-wrap: wrap;
-  ${themed('Tabs')};
+  ${themed("Tabs")};
 `
 
 Tabs.propTypes = {

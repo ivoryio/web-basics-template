@@ -1,2 +1,2 @@
-export { default as SideMenu } from './SideMenu'
-export { useSideMenu } from './useSideMenu'
+export { default as SideMenu } from "./SideMenu"
+export { useSideMenu } from "./useSideMenu"
