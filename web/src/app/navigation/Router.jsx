@@ -14,7 +14,7 @@ const AppRouter = () => {
   return (
     <Flex flexDirection='column' width={1}>
       {authed ? <SideMenu user={currentUser} /> : null}
-      <Wrapper className='app-body'>
+      <Wrapper id='app-body' role='app-body'>
         <Space p={authed ? 6 : 0}>
           {/* Set false to prevent dumb scroll on navigation */}
           <Router primary={false}>
