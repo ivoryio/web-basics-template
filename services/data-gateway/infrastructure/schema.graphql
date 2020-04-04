@@ -1,0 +1,18 @@
+
+type Query {
+  _empty: String
+}
+
+type Mutation {
+  _empty: String
+}
+
+type NoDataOutput {
+  error: Error
+  success: Boolean!
+}
+
+type Error {
+  code: String
+  message: String
+}

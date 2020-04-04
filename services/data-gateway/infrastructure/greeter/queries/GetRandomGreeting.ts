@@ -2,9 +2,6 @@ import cdk = require('@aws-cdk/core')
 import appsync = require('@aws-cdk/aws-appsync')
 
 export default class GetRandomGreeting {
-  public static readonly query = `
-    getRandomGreeting: GreetingOutput!
-  `
 
   public static createResolver(
     parent: cdk.Construct,

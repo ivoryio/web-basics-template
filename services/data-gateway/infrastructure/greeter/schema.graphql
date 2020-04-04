@@ -1,0 +1,21 @@
+extend type Mutation {
+  saveSalutation(input: SaveSalutationInput!): NoDataOutput
+}
+
+extend type Query {
+  getRandomGreeting: GreetingOutput!
+}
+
+type GreetingOutput {
+  data: Greeting
+  error: Error
+  success: Boolean!
+}
+
+type Greeting {
+  message: String!
+}
+
+input SaveSalutationInput {
+  salutation: String!
+}

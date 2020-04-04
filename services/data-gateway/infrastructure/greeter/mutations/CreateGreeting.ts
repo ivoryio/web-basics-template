@@ -2,15 +2,6 @@ import cdk = require('@aws-cdk/core')
 import appsync = require('@aws-cdk/aws-appsync')
 
 export default class SaveSalutation {
-  public static readonly input = `
-    input SaveSalutationInput {
-      salutation: String!
-    }
-  `
-
-  public static readonly mutation = `
-    saveSalutation(input: SaveSalutationInput!): NoDataOutput
-  `
 
   public static createResolver(
     parent: cdk.Construct,

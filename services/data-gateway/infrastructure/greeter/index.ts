@@ -6,29 +6,6 @@ import appsync = require('@aws-cdk/aws-appsync')
 import SaveSalutation from './mutations/CreateGreeting'
 import GetRandomGreeting from './queries/GetRandomGreeting'
 
-export class GreeterSchema {
-  public static readonly Types = `
-    type Greeting {
-      message: String!
-    }
-
-    type GreetingOutput {
-      data: Greeting
-      error: Error
-      success: Boolean!
-    }
-  `
-  public static Inputs = `
-    ${SaveSalutation.input}
-  `
-  public static readonly Queries = `
-    ${GetRandomGreeting.query}
-  `
-  public static readonly Mutations = `
-    ${SaveSalutation.mutation}
-  `
-}
-
 export class GreeterDataSource {
   public static make(
     parent: cdk.Construct,

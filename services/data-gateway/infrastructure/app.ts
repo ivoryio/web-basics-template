@@ -5,9 +5,9 @@ const PROJECT_NAME = process.env.PROJECT_NAME || 'xxx'
 
 const app = new cdk.App()
 
-new ServiceStack(app, `${PROJECT_NAME}-api-gateway-service`, {
+new ServiceStack(app, `${PROJECT_NAME}-data-gateway-service`, {
   projectName: `${PROJECT_NAME}`,
   tags: {
-    service: 'api-gateway'
+    service: 'data-gateway'
   }
 })
