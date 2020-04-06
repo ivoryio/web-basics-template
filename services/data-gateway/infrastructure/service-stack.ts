@@ -38,7 +38,7 @@ export class ServiceStack extends cdk.Stack {
       defaultAction: 'ALLOW',
     }
 
-    new appsync.CfnApiKey(this, 'project-data-gateway-key', {
+    new appsync.CfnApiKey(this, `${this.projectName}-data-gateway-key`, {
       apiId: api.attrApiId,
     })
 
@@ -46,7 +46,7 @@ export class ServiceStack extends cdk.Stack {
   }
   private createSchema(api: appsync.CfnGraphQLApi) {
     const schema = this.readSchema()
-    return new appsync.CfnGraphQLSchema(this, 'project-data-gateway-schema', {
+    return new appsync.CfnGraphQLSchema(this, `${this.projectName}-data-gateway-schema`, {
       apiId: api.attrApiId,
       definition: schema,
     })
